@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3965eb5c1ce581140a4da8e04cf9bb41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proj: {fileID: 1501748925772088, guid: 052dd71ae44f16840afae6155bc54254, type: 2}
+  proj: {fileID: 114479125565653694, guid: 052dd71ae44f16840afae6155bc54254, type: 2}
   projSpawnPoint: {fileID: 4969622901848032}
 --- !u!212 &212928820991890156
 SpriteRenderer:

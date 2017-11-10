@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class AbstractWeaponFireManager: MonoBehaviour, IFireable
 {
     // To Do: make an AbstractProjectile class
-    [SerializeField] protected GameObject proj;
+    [SerializeField] protected PhysicalProjectile proj;
     [SerializeField] protected Transform projSpawnPoint;
 
     public abstract void Fire();

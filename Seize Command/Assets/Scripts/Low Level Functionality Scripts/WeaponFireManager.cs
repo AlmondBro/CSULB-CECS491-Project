@@ -6,6 +6,9 @@ public class WeaponFireManager: AbstractWeaponFireManager
 {
     public override void Fire()
     {
-        Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation);
+        if(proj)
+        {
+            Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation);
+        }
     }
 }
