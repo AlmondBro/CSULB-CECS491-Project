@@ -79,8 +79,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Abstract\AbstractAttackManager.cs" />
+    <Compile Include="Assets\Scripts\Abstract\AbstractHealthManager.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractWeaponFireManager.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PhysicalProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerAttackManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponFireManager.cs" />
