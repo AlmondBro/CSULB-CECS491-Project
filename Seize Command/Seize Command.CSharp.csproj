@@ -80,12 +80,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AbstractAttackManager.cs" />
-    <Compile Include="Assets\Scripts\WeaponFireManager.cs" />
-    <Compile Include="Assets\Scripts\PhysicalProjectile.cs" />
-    <Compile Include="Assets\Scripts\AbstractWeaponFireManager.cs" />
-    <Compile Include="Assets\Scripts\IFireable.cs" />
-    <Compile Include="Assets\Scripts\PlayerAttackManager.cs" />
+    <Compile Include="Assets\Scripts\Abstract\AbstractAttackManager.cs" />
+    <Compile Include="Assets\Scripts\Abstract\AbstractHealthManager.cs" />
+    <Compile Include="Assets\Scripts\Abstract\AbstractWeaponFireManager.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PhysicalProjectile.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerAttackManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerHealthManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerInteractionManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponFireManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
