@@ -39,6 +39,17 @@ public class PlayerMovementManager : AbstractMovementManager
             x = 1;
         }
 
-        rb2d.velocity = new Vector2(speed * x, speed * y);
+       if(y != 0 && x != 0)
+        {
+
+            float diag_speed = speed * Mathf.Sqrt(.5f);
+            Debug.Log(diag_speed);
+            rb2d.velocity = new Vector2(diag_speed * x, diag_speed * y);
+
+        }
+       else
+        {
+           rb2d.velocity = new Vector2(speed * x, speed * y);
+        }
     }
 }
