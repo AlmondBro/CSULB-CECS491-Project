@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class AbstractMovementManager : MonoBehaviour
 {
-    [SerializeField] float speed;
+    [SerializeField] protected float speed;
 
     protected abstract void Movement();
 }

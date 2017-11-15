@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerMovementManager : AbstractMovementManager
 {
-    [SerializeField] float speed;
-
     Rigidbody2D rb2d;
 
     void Start()
