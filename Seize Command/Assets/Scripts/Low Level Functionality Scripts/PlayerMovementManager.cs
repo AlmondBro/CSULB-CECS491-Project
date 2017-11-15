@@ -21,13 +21,9 @@ public class PlayerMovementManager : AbstractMovementManager
 
     protected override void Movement()
     {
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        difference.Normalize();
-        float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotation_z + -90);
-
         int x = 0;
         int y = 0;
+
         if (Input.GetKey("w"))
         {
             y = 1;
@@ -46,10 +42,5 @@ public class PlayerMovementManager : AbstractMovementManager
         }
 
         rb2d.velocity = new Vector2(speed * x, speed * y);
-
-        if (Input.GetKeyDown("space"))
-        {
-            rb2d.velocity = new Vector2(0, 0);
-        }
     }
 }

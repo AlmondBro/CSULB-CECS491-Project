@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Abstract\AbstractAimManager.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractAttackManager.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractHealthManager.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractMovementManager.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PhysicalProjectile.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerAimManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerAttackManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerInteractionManager.cs" />

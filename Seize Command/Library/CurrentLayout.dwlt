@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1264
     height: 571
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 711, y: 492}
+  m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
-  controlID: 119
+  controlID: 65
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,8 +131,8 @@ MonoBehaviour:
     y: 0
     width: 703
     height: 571
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
   controlID: 12
 --- !u!114 &7
@@ -179,8 +179,8 @@ MonoBehaviour:
     y: 344
     width: 703
     height: 227
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -280,8 +280,8 @@ MonoBehaviour:
     y: 0
     width: 306
     height: 571
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -563,7 +563,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 58b0ffffd6fbffffd8fbffff00000000
+    m_ExpandedIDs: d6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -624,7 +624,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts/Interfaces
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
@@ -635,7 +635,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 32260000
     m_LastClickedID: 9778
-    m_ExpandedIDs: 3e2600005226000056260000582600005a260000622600006e260000ce260000
+    m_ExpandedIDs: 30260000482600004c2600004e260000502600005826000064260000ca260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -663,18 +663,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 66}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 3e2600005226000056260000582600005a260000622600006e260000ce260000
+    m_ExpandedIDs: 30260000482600004c2600004e260000502600005826000064260000ca260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PlayerMovementManager
-      m_OriginalName: PlayerMovementManager
+      m_Name: IMovement
+      m_OriginalName: IMovement
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 9942
+      m_UserData: 9936
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
