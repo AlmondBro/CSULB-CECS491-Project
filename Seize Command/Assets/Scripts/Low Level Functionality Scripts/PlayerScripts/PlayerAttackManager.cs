@@ -6,7 +6,7 @@ public class PlayerAttackManager : AbstractAttackManager
 {
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             Attack();
         }
