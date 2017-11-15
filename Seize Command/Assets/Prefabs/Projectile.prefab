@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4044462142303150}
   - component: {fileID: 212915714488586476}
   - component: {fileID: 50614364058511680}
-  - component: {fileID: 114479125565653694}
   - component: {fileID: 58657026515048790}
+  - component: {fileID: 114479125565653694}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Projectile
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 2
-  projectileDamage: 10
+  projectileDamage: 5
 --- !u!212 &212915714488586476
 SpriteRenderer:
   m_ObjectHideFlags: 1

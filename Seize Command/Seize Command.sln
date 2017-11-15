@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seize Command", "Seize Command.csproj", "{F6EBFC97-9F53-C9CD-EA6A-DC3BE57D0EE8}"
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seize Command.CSharp", "Seize Command.CSharp.csproj", "{8CACF700-B655-1996-7248-DD01B7912E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F6EBFC97-9F53-C9CD-EA6A-DC3BE57D0EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6EBFC97-9F53-C9CD-EA6A-DC3BE57D0EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6EBFC97-9F53-C9CD-EA6A-DC3BE57D0EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6EBFC97-9F53-C9CD-EA6A-DC3BE57D0EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CACF700-B655-1996-7248-DD01B7912E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CACF700-B655-1996-7248-DD01B7912E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CACF700-B655-1996-7248-DD01B7912E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CACF700-B655-1996-7248-DD01B7912E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
