@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.1.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -89,6 +87,7 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerAttackManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerInteractionManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerMovementManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponFireManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
