@@ -8,7 +8,6 @@ public abstract class AbstractAttackManager : MonoBehaviour
 
     protected virtual void Attack()
     {
-        Debug.Log("Fire");
         weapon.Fire();
     }
 }
