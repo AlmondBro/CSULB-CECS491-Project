@@ -12,7 +12,7 @@ public class PlayerInteractionManager : MonoBehaviour
         {
             if(interactable != null)
             {
-                interactable.Interact();
+                interactable.Interact(gameObject);
             }
         }
     }
@@ -21,7 +21,7 @@ public class PlayerInteractionManager : MonoBehaviour
     {
         if(coll.gameObject.CompareTag("Interactable"))
         {
-            interactable = coll.gameObject.GetComponent<IInteractable>();
+            interactable = coll.gameObject.GetComponentInParent<IInteractable>();
         }
     }
     

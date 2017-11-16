@@ -4,7 +4,12 @@ using UnityEngine;
 
 public abstract class AbstractAttackManager : MonoBehaviour
 {
-    [SerializeField] AbstractWeaponFireManager weapon;
+    IFireable weapon;
+
+    void Start()
+    {
+        weapon = GetComponentInChildren<IFireable>();
+    }
 
     protected virtual void Attack()
     {
