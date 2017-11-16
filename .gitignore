@@ -32,28 +32,3 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-
-#FMOD Logs
-**/fmod.log
-**/fmod_editor.log
-**/FMODStudioSettings.asset
-**/FMODStudioSettings.asset.meta
-**/FMODStudioCache.asset
-**/FMODStudioCache.asset.meta
-**/Fmod/Metadata
-
-
-# FMOD Banks
-*.bank
-*.bank.meta
-
-Banish/Assets/Fmod/Metadata/EffectPreset.meta
-Banish/Assets/Fmod/metadata/Group.meta
-Banish/Assets/Fmod/Metadata/MixerView.meta
-Banish/Assets/Fmod/Metadata/Snapshop.meta
-Banish/Assets/Fmod/Metadata/VCA.meta
-Banish/Assets/Fmod/Plugins.meta
-Banish/Assets/FMODStudioCache.asset
-Banish/Assets/Resources/FMODStudioSettings.meta
-Banish/Assets/2DDL/2DLight/BugReport/Editor/BugReportUtils.pdb.meta
-Banish/Assets/StreamingAssets.meta
