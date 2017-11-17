@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -215,15 +213,25 @@
     <Compile Include="Assets\Scripts\Abstract\AbstractAimManager.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractAttackManager.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractHealthManager.cs" />
+    <Compile Include="Assets\Scripts\Abstract\AbstractInteractionManager.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractMovementManager.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractSeat.cs" />
+    <Compile Include="Assets\Scripts\Abstract\AbstractSeatSubscriber.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractWeaponFireManager.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteractTurnOnPlayerAim.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteractTurnOnPlayerAttack.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteractTurnOnPlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnInteractTurnOffPlayerAim.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnInteractTurnOffPlayerAttack.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnInteractTurnOffPlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractReapplyCollisionWithSeat.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractReturnPosition.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractSetInteractingToFalse.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAttack.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangePosition.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangeSpriteToSeated.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractIgnoreCollisionWithSeat.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractSetInteractingToTrue.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffAttack.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffMovement.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\GunnerSeat.cs" />

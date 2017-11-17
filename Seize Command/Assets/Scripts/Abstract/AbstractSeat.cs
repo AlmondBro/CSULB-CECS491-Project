@@ -17,16 +17,18 @@ public abstract class AbstractSeat : MonoBehaviour, IInteractable
 
     public virtual void Interact(GameObject interactor)
     {
-        isTaken = isTaken == true ? false : true;
+        bool interacting = interactor.GetComponent<AbstractInteractionManager>().IsInteracting;
 
-        if(isTaken)
+        if (!isTaken && !interacting)
         {
             TakeASeat(interactor);
         }
-        else
+        else if(isTaken && interacting)
         {
             LeaveSeat(interactor);
         }
+
+        isTaken = isTaken == true ? false : true;
     }
 
     protected virtual void TakeASeat(GameObject interactor)
