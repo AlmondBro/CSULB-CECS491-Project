@@ -233,6 +233,7 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerInteractionManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerMovementManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\PhysicalProjectile.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipMovementManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\WeaponFireManager.cs" />
   </ItemGroup>
