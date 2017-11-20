@@ -20,9 +20,9 @@ public abstract class AbstractSeat : MonoBehaviour, IInteractable
 
     public virtual void Interact(GameObject interactor)
     {
-        if (currentInteractor)
+        if (currentInteractor != null)
         {
-            if(interactor.Equals(currentInteractor))
+            if (interactor.Equals(currentInteractor))
             {
                 LeaveSeat(interactor);
             }

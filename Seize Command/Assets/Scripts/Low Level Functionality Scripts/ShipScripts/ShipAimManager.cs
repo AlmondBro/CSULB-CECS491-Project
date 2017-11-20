@@ -7,6 +7,15 @@ public class ShipAimManager : AbstractAimManager
 {
     [SerializeField] float rotation_speed;
 
+    void Start()
+    {
+        enabled = false;    
+    }
+    void FixedUpdate()
+    {
+        Aim();
+    }
+
     protected override void Aim()
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

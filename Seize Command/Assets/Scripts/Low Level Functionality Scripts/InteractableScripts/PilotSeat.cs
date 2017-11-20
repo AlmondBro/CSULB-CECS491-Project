@@ -5,10 +5,12 @@ using UnityEngine;
 public class PilotSeat : AbstractSeat
 {
     AbstractMovementManager shipMovementManager;
+    AbstractAimManager shipAimManager;
 
     void Awake()
     {
         shipMovementManager = GetComponentInParent<AbstractMovementManager>();
+        shipAimManager = GetComponentInParent<AbstractAimManager>();
     }
 
     protected override void TakeASeat(GameObject interactor)
@@ -16,6 +18,7 @@ public class PilotSeat : AbstractSeat
         base.TakeASeat(interactor);
         Debug.Log("Pilot Seat On");
         shipMovementManager.enabled = true;
+        shipAimManager.enabled = true;
     }
 
     protected override void LeaveSeat(GameObject interactor)
@@ -23,5 +26,6 @@ public class PilotSeat : AbstractSeat
         base.LeaveSeat(interactor);
         Debug.Log("Pilot Seat Off");
         shipMovementManager.enabled = false;
+        shipAimManager.enabled = false;
     }
 }
