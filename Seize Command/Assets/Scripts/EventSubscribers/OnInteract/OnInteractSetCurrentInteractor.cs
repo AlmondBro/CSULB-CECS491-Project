@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractSetInteractingToTrue : AbstractSeatSubscriber
+public class OnInteractSetCurrentInteractor : AbstractSeatSubscriber
 {
     void OnEnable()
     {
@@ -19,7 +19,6 @@ public class OnInteractSetInteractingToTrue : AbstractSeatSubscriber
 
     void SetInteractingToTrue(GameObject interactor)
     {
-        AbstractInteractionManager manager = interactor.GetComponent<AbstractInteractionManager>();
-        manager.IsInteracting = true;
+        seat.CurrentInteractor = interactor;
     }
 }

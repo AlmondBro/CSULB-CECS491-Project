@@ -6,17 +6,6 @@ public abstract class AbstractInteractionManager : MonoBehaviour
 {
     protected IInteractable interactable;
 
-    public bool IsInteracting
-    {
-        get;
-        set;
-    }
-
-    void Start()
-    {
-        IsInteracting = false;
-    }
-
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("Interactable"))

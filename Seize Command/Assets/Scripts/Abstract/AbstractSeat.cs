@@ -8,27 +8,29 @@ public abstract class AbstractSeat : MonoBehaviour, IInteractable
     public event InteractableAction onInteract;
     public event InteractableAction onDeInteract;
 
-    protected bool isTaken;
-
-    void Start()
+    public GameObject CurrentInteractor
     {
-        isTaken = false;
+        set
+        {
+            currentInteractor = value;
+        }
     }
+
+    GameObject currentInteractor;
 
     public virtual void Interact(GameObject interactor)
     {
-        bool interacting = interactor.GetComponent<AbstractInteractionManager>().IsInteracting;
-
-        if (!isTaken && !interacting)
+        if (currentInteractor)
+        {
+            if(interactor.Equals(currentInteractor))
+            {
+                LeaveSeat(interactor);
+            }
+        }
+        else
         {
             TakeASeat(interactor);
         }
-        else if(isTaken && interacting)
-        {
-            LeaveSeat(interactor);
-        }
-
-        isTaken = isTaken == true ? false : true;
     }
 
     protected virtual void TakeASeat(GameObject interactor)

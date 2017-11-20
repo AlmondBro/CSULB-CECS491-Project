@@ -3,17 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovementManager : AbstractMovementManager
 {
-    Rigidbody2D rb2d;
-    [SerializeField] Rigidbody2D rb2dShip;
-
-    void Start()
+    public Vector2 MovementDirection
     {
-        rb2d = GetComponent<Rigidbody2D>();
-        //Debug.Log(rb2dShip);
+        get
+        {
+            return movementDirection;
+        }
     }
+
+    Vector2 movementDirection;
 
     void FixedUpdate()
     {
@@ -45,15 +45,11 @@ public class PlayerMovementManager : AbstractMovementManager
         if(y != 0 && x != 0)
         {
             float diag_speed = strength * Mathf.Sqrt(.5f);
-            rb2d.velocity = new Vector2(diag_speed * x, diag_speed * y);
+            movementDirection = new Vector2(diag_speed * x, diag_speed * y);
         }
         else
         {
-            rb2d.velocity = new Vector2(strength * x, strength * y);
+            movementDirection = new Vector2(strength * x, strength * y);
         }
-
-        rb2d.velocity += rb2dShip.velocity;
-
-        Debug.Log(rb2d.velocity);
     }
 }

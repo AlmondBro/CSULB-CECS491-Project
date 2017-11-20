@@ -223,14 +223,14 @@
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractReapplyCollisionWithSeat.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractReturnPosition.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractSetInteractingToFalse.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractRemoveCurrentInteractor.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAttack.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnMovement.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangePosition.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangeSpriteToSeated.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractIgnoreCollisionWithSeat.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractSetInteractingToTrue.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractSetCurrentInteractor.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffAttack.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffMovement.cs" />
@@ -243,7 +243,7 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerInteractionManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerMovementManager.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerPositionOffsetInSeat.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerPositionOffsetWhileSeated.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\PhysicalProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipAimManager.cs" />
