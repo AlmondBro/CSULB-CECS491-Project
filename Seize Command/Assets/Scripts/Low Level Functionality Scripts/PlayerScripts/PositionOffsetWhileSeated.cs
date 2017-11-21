@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerMovementManager))]
-public class PlayerPositionOffsetWhileSeated : MonoBehaviour
+[RequireComponent(typeof(AbstractMovementManager))]
+public class PositionOffsetWhileSeated : MonoBehaviour
 {
     Rigidbody2D rb2dPlayer;
     Rigidbody2D rb2dShip;

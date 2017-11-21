@@ -243,7 +243,7 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerInteractionManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerMovementManager.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerPositionOffsetWhileSeated.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PositionOffsetWhileSeated.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\PhysicalProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipAimManager.cs" />
