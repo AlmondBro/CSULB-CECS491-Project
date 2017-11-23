@@ -4,15 +4,25 @@ using UnityEngine;
 
 public abstract class AbstractAttackManager : MonoBehaviour
 {
-    IFireable weapon;
-
-    void Start()
+    public IFireable Weapon
     {
-        weapon = GetComponentInChildren<IFireable>();
+        get
+        {
+            return weapon;
+        }
+        set
+        {
+            weapon = value;
+        }
     }
+
+    private IFireable weapon;
 
     protected virtual void Attack()
     {
-        weapon.Fire();
+        if(weapon != null)
+        {
+            weapon.Fire();
+        }
     }
 }
