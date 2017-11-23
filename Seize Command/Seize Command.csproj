@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -218,9 +220,11 @@
     <Compile Include="Assets\Scripts\Abstract\AbstractSeat.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractSeatSubscriber.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractShipSubscribers.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractWeaponFireManager.cs" />
+    <Compile Include="Assets\Scripts\Abstract\AbstractWeaponManager.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeaponToCannon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeGunPositionToOrigin.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateTurnOffWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractReapplyCollisionWithSeat.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractRemoveCurrentInteractor.cs" />

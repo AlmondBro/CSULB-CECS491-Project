@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AbstractWeaponFireManager: MonoBehaviour, IFireable
+public abstract class AbstractWeaponManager: MonoBehaviour, IFireable
 {
     // To Do: make an AbstractProjectile class
     [SerializeField] protected PhysicalProjectile proj;

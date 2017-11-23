@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cannon : AbstractWeaponFireManager
+public class Cannon : AbstractWeaponManager
 {
     public override void Fire()
     {

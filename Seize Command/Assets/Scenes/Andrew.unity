@@ -624,6 +624,8 @@ GameObject:
   - component: {fileID: 2015350772}
   - component: {fileID: 2015350773}
   - component: {fileID: 2015350774}
+  - component: {fileID: 2015350776}
+  - component: {fileID: 2015350775}
   m_Layer: 0
   m_Name: OnActivateEventSubscribers
   m_TagString: Untagged
@@ -664,5 +666,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1daf9dd7b036bf3419fa83e0b2ce7def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2015350775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015350771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28faf0f78ab486f4ba09d75810df2777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2015350776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015350771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb29dde69503cd478917c021e44f460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

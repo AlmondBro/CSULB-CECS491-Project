@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class ShipWeaponControlManager : MonoBehaviour
 {
-    public delegate void ActivateWeapon(AbstractWeaponFireManager weapon);
+    public delegate void ActivateWeapon(AbstractWeaponManager weapon);
     public event ActivateWeapon onActivate;
+    public event ActivateWeapon onDeactivate;
 
-    AbstractAttackManager shipAttackManager;
-
-    void Start()
-    {
-        shipAttackManager = GetComponent<AbstractAttackManager>();   
-    }
+    AbstractWeaponManager currentWeapon;
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Cannon cannon = GetComponentInChildren<Cannon>();
-            onActivate(cannon);
+            if(currentWeapon)
+            {
+                onDeactivate(currentWeapon);
+            }
+
+            currentWeapon = GetComponentInChildren<Cannon>();
+            onActivate(currentWeapon);
         }
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            shipAttackManager.Weapon = null;
-            Cannon cannon = GetComponentInChildren<Cannon>();
-            cannon.gameObject.GetComponent<AbstractAimManager>().enabled = false;
+            if(currentWeapon)
+            {
+                onDeactivate(currentWeapon);
+            }
+
+            currentWeapon = null;
+            GetComponent<AbstractAttackManager>().Weapon = null;
         }
         
         //All other weapons down here
