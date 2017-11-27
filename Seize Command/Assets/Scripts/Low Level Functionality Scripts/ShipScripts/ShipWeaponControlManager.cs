@@ -35,4 +35,9 @@ public class ShipWeaponControlManager : MonoBehaviour
         
         //All other weapons down here
     }
+
+    void OnDisable()
+    {
+        onDeactivate(currentWeapon);
+    }
 }
