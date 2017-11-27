@@ -221,9 +221,9 @@
     <Compile Include="Assets\Scripts\Abstract\AbstractSeatSubscriber.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractShipSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractWeapon.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeaponToCannon.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeGunPositionToOrigin.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeWeaponPositionToOrigin.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateTurnOffWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractReapplyCollisionWithSeat.cs" />
