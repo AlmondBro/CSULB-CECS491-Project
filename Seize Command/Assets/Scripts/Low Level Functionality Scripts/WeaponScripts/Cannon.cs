@@ -6,7 +6,7 @@ public class Cannon : AbstractWeapon
 {
     public override void Fire()
     {
-        if (proj)
+        if(proj)
         {
             GameObject projectileObject = Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation).gameObject;
 

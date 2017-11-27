@@ -10,37 +10,45 @@ public class ShipWeaponControlManager : MonoBehaviour
 
     AbstractWeapon currentWeapon;
 
+    void Start()
+    {
+        enabled = false;
+    }
+
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        ControlWeapons();
+    }
+
+    void ControlWeapons()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if(currentWeapon)
-            {
-                onDeactivate(currentWeapon);
-            }
+            DeactivateWeapon();
 
             currentWeapon = GetComponentInChildren<Cannon>();
             onActivate(currentWeapon);
         }
-        if(Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            if(currentWeapon)
-            {
-                onDeactivate(currentWeapon);
-            }
 
-            currentWeapon = null;
-            GetComponent<AbstractAttackManager>().Weapon = null;
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            DeactivateWeapon();
+
+            currentWeapon = GetComponentInChildren<Disruptor>();
+            onActivate(currentWeapon);
         }
-        
-        //All other weapons down here
+    }
+
+    void DeactivateWeapon()
+    {
+        if (currentWeapon)
+        {
+            onDeactivate(currentWeapon);
+        }
     }
 
     void OnDisable()
     {
-        if(currentWeapon)
-        {
-            onDeactivate(currentWeapon);
-        }
+        DeactivateWeapon();
     }
 }
