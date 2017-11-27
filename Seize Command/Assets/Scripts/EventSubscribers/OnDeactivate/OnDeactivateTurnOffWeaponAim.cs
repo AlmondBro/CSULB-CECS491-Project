@@ -18,7 +18,7 @@ public class OnDeactivateTurnOffWeaponAim : AbstractShipSubscribers
         }
     }
 
-    void TurnOffWeaponAim(AbstractWeaponManager cannon)
+    void TurnOffWeaponAim(AbstractWeapon cannon)
     {
         cannon.transform.parent.rotation = Quaternion.Euler(0, 0, 0);
     }

@@ -18,7 +18,7 @@ public class OnDeactivateChangeGunPositionToOrigin : AbstractShipSubscribers
         }
     }
 
-    void ChangeGunPositionToOrigin(AbstractWeaponManager cannon)
+    void ChangeGunPositionToOrigin(AbstractWeapon cannon)
     {
         cannon.gameObject.GetComponent<AbstractAimManager>().enabled = false;
     }

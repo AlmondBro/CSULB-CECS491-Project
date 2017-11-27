@@ -17,7 +17,7 @@ public class OnActivateChangeWeaponToCannon : AbstractShipSubscribers
         }
     }
 
-    void ChangeWeaponToCannon(AbstractWeaponManager cannon)
+    void ChangeWeaponToCannon(AbstractWeapon cannon)
     {
         AbstractAttackManager shipAttackManager = GetComponentInParent<AbstractAttackManager>();
         shipAttackManager.Weapon = cannon;

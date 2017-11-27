@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ShipWeaponControlManager : MonoBehaviour
 {
-    public delegate void ActivateWeapon(AbstractWeaponManager weapon);
+    public delegate void ActivateWeapon(AbstractWeapon weapon);
     public event ActivateWeapon onActivate;
     public event ActivateWeapon onDeactivate;
 
-    AbstractWeaponManager currentWeapon;
+    AbstractWeapon currentWeapon;
 
     void Update()
     {

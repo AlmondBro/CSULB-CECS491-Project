@@ -18,7 +18,7 @@ public class OnActivateTurnOnWeaponAim : AbstractShipSubscribers
         }
     }
 
-    void TurnOnWeaponAim(AbstractWeaponManager cannon)
+    void TurnOnWeaponAim(AbstractWeapon cannon)
     {
         cannon.gameObject.GetComponent<AbstractAimManager>().enabled = true;
     }

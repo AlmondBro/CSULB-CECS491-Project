@@ -220,7 +220,7 @@
     <Compile Include="Assets\Scripts\Abstract\AbstractSeat.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractSeatSubscriber.cs" />
     <Compile Include="Assets\Scripts\Abstract\AbstractShipSubscribers.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractWeaponManager.cs" />
+    <Compile Include="Assets\Scripts\Abstract\AbstractWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeaponToCannon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeGunPositionToOrigin.cs" />
