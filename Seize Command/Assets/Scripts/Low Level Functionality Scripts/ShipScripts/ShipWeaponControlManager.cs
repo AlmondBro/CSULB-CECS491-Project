@@ -30,6 +30,30 @@ public class ShipWeaponControlManager : MonoBehaviour
             onActivate(currentWeapon);
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            DeactivateWeapon();
+
+            currentWeapon = GetComponentInChildren<ShotGun>();
+            onActivate(currentWeapon);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            DeactivateWeapon();
+
+            currentWeapon = GetComponentInChildren<Torpedo>();
+            onActivate(currentWeapon);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            DeactivateWeapon();
+
+            currentWeapon = GetComponentInChildren<Missile>();
+            onActivate(currentWeapon);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             DeactivateWeapon();

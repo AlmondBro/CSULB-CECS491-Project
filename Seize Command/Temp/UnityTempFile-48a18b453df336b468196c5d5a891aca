@@ -55,8 +55,8 @@
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
--r:C:/Users/james/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll
--r:C:/Users/james/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll
+-r:C:/Users/dfung_000/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll
+-r:C:/Users/dfung_000/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll
 -define:UNITY_5_3_OR_NEWER
 -define:UNITY_5_4_OR_NEWER
 -define:UNITY_5_5_OR_NEWER
@@ -190,7 +190,9 @@ Assets/Scripts/Interfaces/IInteractable.cs
 "Assets/Scripts/Low Level Functionality Scripts/PlayerScripts/PlayerMovementManager.cs"
 "Assets/Scripts/Low Level Functionality Scripts/PlayerScripts/PositionOffsetWhileSeated.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/DisruptorProjectile.cs"
+"Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/MissileProjectile.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/PhysicalProjectile.cs"
+"Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/TorpedoProjectile.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ShipScripts/CameraController.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ShipScripts/ShipAimManager.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ShipScripts/ShipAttackManager.cs"
@@ -198,6 +200,9 @@ Assets/Scripts/Interfaces/IInteractable.cs
 "Assets/Scripts/Low Level Functionality Scripts/ShipScripts/ShipWeaponControlManager.cs"
 "Assets/Scripts/Low Level Functionality Scripts/WeaponScripts/Cannon.cs"
 "Assets/Scripts/Low Level Functionality Scripts/WeaponScripts/Disruptor.cs"
+"Assets/Scripts/Low Level Functionality Scripts/WeaponScripts/Missile.cs"
+"Assets/Scripts/Low Level Functionality Scripts/WeaponScripts/ShotGun.cs"
+"Assets/Scripts/Low Level Functionality Scripts/WeaponScripts/Torpedo.cs"
 "Assets/Scripts/Low Level Functionality Scripts/WeaponScripts/WeaponAimManager.cs"
 "Assets/Scripts/Low Level Functionality Scripts/WeaponScripts/WeaponFireManager.cs"
 -r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
