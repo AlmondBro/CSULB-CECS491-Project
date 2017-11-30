@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class OnDeactivateTurnOffWeaponAim : AbstractShipSubscribers
 {
+    [SerializeField] Transform shipRotation;
+
     void OnEnable()
     {
         control.onDeactivate += TurnOffWeaponAim;
@@ -18,8 +20,8 @@ public class OnDeactivateTurnOffWeaponAim : AbstractShipSubscribers
         }
     }
 
-    void TurnOffWeaponAim(AbstractWeaponManager cannon)
+    void TurnOffWeaponAim(AbstractWeapon weapon)
     {
-        cannon.transform.parent.rotation = Quaternion.Euler(0, 0, 0);
+        weapon.gameObject.GetComponent<AbstractAimManager>().enabled = false;
     }
 }
