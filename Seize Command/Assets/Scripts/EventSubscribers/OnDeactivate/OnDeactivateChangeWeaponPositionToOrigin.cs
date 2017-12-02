@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class OnDeactivateChangeWeaponPositionToOrigin : AbstractShipSubscribers
 {
+    [SerializeField] Transform ship;
+
     void OnEnable()
     {
         control.onDeactivate += ChangeWeaponPositionToOrigin;
@@ -20,6 +22,6 @@ public class OnDeactivateChangeWeaponPositionToOrigin : AbstractShipSubscribers
 
     void ChangeWeaponPositionToOrigin(AbstractWeapon weapon)
     {
-        weapon.transform.parent.rotation = Quaternion.Euler(0, 0, 0);
+        weapon.transform.parent.rotation = ship.rotation;
     }
 }

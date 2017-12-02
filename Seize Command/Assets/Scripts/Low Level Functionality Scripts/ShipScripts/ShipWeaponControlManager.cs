@@ -15,7 +15,7 @@ public class ShipWeaponControlManager : MonoBehaviour
         enabled = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         ControlWeapons();
     }

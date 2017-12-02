@@ -35,8 +35,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4184757366418984}
   - component: {fileID: 212002650210796344}
-  - component: {fileID: 114337573112077606}
   - component: {fileID: 114994285673138278}
+  - component: {fileID: 114337573112077606}
   m_Layer: 0
   m_Name: Disruptor
   m_TagString: Untagged
@@ -51,8 +51,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861302188780482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5000001, z: 0}
-  m_LocalScale: {x: 0.25, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4570260352685068}
   m_Father: {fileID: 0}
@@ -95,6 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proj: {fileID: 114970698103063264, guid: 7074dd18223c431458f9115f82732475, type: 2}
   projSpawnPoint: {fileID: 4570260352685068}
+  parent: {fileID: 0}
+  cooldown: 10
 --- !u!212 &212002650210796344
 SpriteRenderer:
   m_ObjectHideFlags: 1
