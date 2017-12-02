@@ -19,20 +19,10 @@ public class DisruptorProjectile : AbstractProjectile
         rb.velocity = transform.up * projectileSpeed;
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if(coll.gameObject.CompareTag("Ship"))
-        {
-            GameObject ship = coll.gameObject;
-
-            SendDamage(ship);
-            StartCoroutine(DisruptShip(ship));
-        }
-    }
-
     protected override void SendDamage(GameObject ship)
     {
-        ship.GetComponent<HealthManager>().TakeDamage(projectileDamage);
+        ship.GetComponent<HealthManager>().TakeDamage(damage);
+        StartCoroutine(DisruptShip(ship));
         Destroy(gameObject);
     }
 

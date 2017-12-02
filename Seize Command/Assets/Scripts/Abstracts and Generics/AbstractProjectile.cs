@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class AbstractProjectile : MonoBehaviour
 {
-    [SerializeField] protected float projectileDamage;
+    [SerializeField] protected float damage;
     protected Rigidbody2D rb;
 
     [SerializeField] float lifeTime;
@@ -15,6 +15,15 @@ public abstract class AbstractProjectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         StartCoroutine(CoDestroyOverTime());
+    }
+
+    protected virtual void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.CompareTag("Ship"))
+        {
+            GameObject objectWithHealth = coll.gameObject;
+            SendDamage(objectWithHealth);
+        }
     }
 
     protected abstract void SendDamage(GameObject ship);

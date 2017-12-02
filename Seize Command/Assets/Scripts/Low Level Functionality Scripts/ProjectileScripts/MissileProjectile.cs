@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class MissileProjectile : AbstractProjectile
 {
-    [SerializeField]
-    float projectileSpeed;
-    private GameObject target;
+    [SerializeField] float projectileSpeed;
+    GameObject target;
 
     private void Awake()
     {
@@ -30,24 +29,9 @@ public class MissileProjectile : AbstractProjectile
         transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), target.transform.position, projectileSpeed * Time.deltaTime);
     }
 
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.CompareTag("Ship"))
-        {
-            GameObject ship = coll.gameObject;
-            SendDamage(ship);
-        }
-    }
-
     protected override void SendDamage(GameObject ship)
     {
-        ship.GetComponent<HealthManager>().TakeDamage(projectileDamage);
+        ship.GetComponent<HealthManager>().TakeDamage(damage);
         Destroy(gameObject);
-    }
-
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-
     }
 }

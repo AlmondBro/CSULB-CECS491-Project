@@ -5,36 +5,21 @@ using UnityEngine;
 
 public class TorpedoProjectile : AbstractProjectile
 {
-    [SerializeField]
-    float projectileSpeed;
+    [SerializeField] float forceStrength;
 
-    protected override void Start()
+    void FixedUpdate()
     {
-        base.Start();
-    }
-
-    public void FixedUpdate()
-    {
-        SetProjectileSpeed();
+        SetProjectileSpeed();   
     }
 
     void SetProjectileSpeed()
     {
-        rb.AddForce(transform.up * projectileSpeed);
-    }
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.CompareTag("Ship"))
-        {
-            GameObject ship = coll.gameObject;
-            SendDamage(ship);
-        }
+        rb.AddForce(transform.up * forceStrength);
     }
 
     protected override void SendDamage(GameObject ship)
     {
-        ship.GetComponent<HealthManager>().TakeDamage(projectileDamage);
+        ship.GetComponent<HealthManager>().TakeDamage(damage);
         Destroy(gameObject);
     }
 }
