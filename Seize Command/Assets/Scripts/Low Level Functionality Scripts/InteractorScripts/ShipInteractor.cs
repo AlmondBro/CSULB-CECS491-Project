@@ -2,27 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipInteractor : AbstractInteractionManager {
-
-	AbstractInteractionManager boardingManager;
-	// Use this for initialization
+public class ShipInteractor : AbstractInteractionManager
+{
 	void Awake()
 	{
 		enabled = false;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-
-		if(Input.GetKeyDown(KeyCode.F))
-		{
-
-			if (interactable != null) 
-			{
-				interactable.Interact (gameObject);
-			} 
-
-		}
-		
+	void FixedUpdate ()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (interactable != null)
+            {
+                interactable.Interact(gameObject);
+            }
+        }
 	}
 }

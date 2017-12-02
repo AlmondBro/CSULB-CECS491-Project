@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -244,11 +242,15 @@
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\ScrollingCamera.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\GunnerSeat.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\PilotSeat.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\ShipInteractable.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractorScripts\PlayerInteractor.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractorScripts\ShipInteractor.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAimManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAttackManager.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerInteractionManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerMovementManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PositionOffsetWhileSeated.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\BeamLazer.cs" />
@@ -257,7 +259,6 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\MissileProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\ShotgunProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\TorpedoProjectile.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipAimManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipAttackManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipMovementManager.cs" />

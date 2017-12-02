@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class Missile : AbstractWeapon
 {
+    public override void Fire()
+    {
+        Vector2 mouseLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if(Physics2D.OverlapCircle(mouseLocation, 1))
+        {
+            GameObject ship = Physics2D.OverlapCircle(mouseLocation, 1).gameObject;
+            if(ship.CompareTag("Ship"))
+            {
+                base.Fire();
+            }
+        }
+    }
+
     protected override void Instantiate()
     {
         GameObject projectileObject = Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation).gameObject;

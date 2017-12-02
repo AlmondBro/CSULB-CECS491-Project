@@ -7,6 +7,7 @@ public class Beam : AbstractWeapon
     protected override void Instantiate()
     {
         GameObject projectileObject = Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation).gameObject;
+        projectileObject.transform.parent = gameObject.transform;
         IgnoreCollisions(projectileObject);
     }
 
