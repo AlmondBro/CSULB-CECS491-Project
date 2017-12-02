@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class ScrollingCamera : MonoBehaviour
 {
-    [SerializeField] int switchLayerPoint;
+    [Header("Top Level/Deck Level changes")]
+    [SerializeField] float changeLayerViewLowPoint;
+    [SerializeField] float changeLayerViewHighPoint;
+    [SerializeField] float changeOpacityStrength;
+
+    [Space]
+
+    [Header("Zooming Boundaries")]
+    [SerializeField] int startingSize;
     [SerializeField] int lowerBound;
     [SerializeField] int upperBound;
 
@@ -14,7 +22,8 @@ public class ScrollingCamera : MonoBehaviour
 
     void Start()
     {
-        main = GetComponent<Camera>(); 
+        main = GetComponent<Camera>();
+        main.orthographicSize = startingSize;
     }
 
     void FixedUpdate()
@@ -31,10 +40,12 @@ public class ScrollingCamera : MonoBehaviour
         if (delta > 0f)
         {
             newSize--;
+            Check(delta);
         }
         if (delta < 0f)
         {
             newSize++;
+            Check(delta);
         }
 
         if (newSize < upperBound && newSize > lowerBound)
@@ -43,9 +54,31 @@ public class ScrollingCamera : MonoBehaviour
         }
     }
 
-    void SwitchLayers()
+    void ChangeAlpha(float delta)
     {
-        SortingLayer[] layer = SortingLayer.layers;
-        Canvas ASD;
+        GameObject player = GetComponent<CameraController>().Player;
+        GameObject ship = player.transform.parent.parent.gameObject;
+
+        if (ship.CompareTag("Ship"))
+        {
+            SpriteRenderer[] topLevelSprites = ship.GetComponentsInChildren<SpriteRenderer>();
+            for (int i = 0; i < topLevelSprites.Length; i++)
+            {
+                if (topLevelSprites[i].sortingLayerName == "Ship Top Level")
+                {
+                    Color newColor = topLevelSprites[i].color;
+                    newColor.a += -delta * changeOpacityStrength;
+                    topLevelSprites[i].color = newColor;
+                }
+            }
+        }
+    }
+
+    void Check(float delta)
+    {
+        if (newSize < changeLayerViewHighPoint && newSize > changeLayerViewLowPoint)
+        {
+            ChangeAlpha(delta);
+        }
     }
 }

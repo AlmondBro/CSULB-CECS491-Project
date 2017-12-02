@@ -44,9 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ship Deck
+    uniqueID: 4194015507
+    locked: 0
   - name: Ship Top Level
     uniqueID: 1347283835
-    locked: 0
-  - name: Ship Bottom Level
-    uniqueID: 4194015507
     locked: 0
