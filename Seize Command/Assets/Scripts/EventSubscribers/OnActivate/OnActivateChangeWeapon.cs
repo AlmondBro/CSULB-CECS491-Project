@@ -19,6 +19,7 @@ public class OnActivateChangeWeapon : AbstractShipSubscribers
 
     void ChangeWeapon(AbstractWeapon weapon)
     {
+        Debug.Log("hi");
         AbstractAttackManager shipAttackManager = GetComponentInParent<AbstractAttackManager>();
         shipAttackManager.Weapon = weapon;
     }

@@ -27,7 +27,10 @@ public class ShipWeaponControlManager : MonoBehaviour
             DeactivateWeapon();
 
             currentWeapon = GetComponentInChildren<Cannon>();
-            onActivate(currentWeapon);
+            if(currentWeapon)
+            {
+                onActivate(currentWeapon);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))

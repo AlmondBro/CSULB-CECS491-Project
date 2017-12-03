@@ -6,13 +6,11 @@ public class PilotSeat : AbstractSeat
 {
     AbstractMovementManager shipMovementManager;
     AbstractAimManager shipAimManager;
-	AbstractInteractionManager shipInteractor;
 
     void Awake()
     {
         shipMovementManager = GetComponentInParent<AbstractMovementManager>();
         shipAimManager = GetComponentInParent<AbstractAimManager>();
-		shipInteractor = GetComponentInParent<AbstractInteractionManager> ();
     }
 
     protected override void TakeASeat(GameObject interactor)

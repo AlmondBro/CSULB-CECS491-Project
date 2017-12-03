@@ -8,6 +8,8 @@ public abstract class AbstractSeat : MonoBehaviour, IInteractable
     public event InteractableAction onInteract;
     public event InteractableAction onDeInteract;
 
+    [SerializeField] protected ShipInteractor shipInteractor;
+
     public GameObject CurrentInteractor
     {
         set

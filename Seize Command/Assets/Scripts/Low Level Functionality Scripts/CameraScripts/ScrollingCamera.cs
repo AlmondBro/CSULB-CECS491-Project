@@ -68,6 +68,7 @@ public class ScrollingCamera : MonoBehaviour
                 {
                     Color newColor = topLevelSprites[i].color;
                     newColor.a += -delta * changeOpacityStrength;
+
                     topLevelSprites[i].color = newColor;
                 }
             }

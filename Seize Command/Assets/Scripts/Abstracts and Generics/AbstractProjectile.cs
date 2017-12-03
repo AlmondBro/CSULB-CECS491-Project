@@ -19,7 +19,7 @@ public abstract class AbstractProjectile : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.CompareTag("Ship"))
+        if (coll.gameObject.GetComponent<HealthManager>())
         {
             GameObject objectWithHealth = coll.gameObject;
             SendDamage(objectWithHealth);

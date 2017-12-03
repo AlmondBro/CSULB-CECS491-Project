@@ -6,53 +6,66 @@ public class ShipInteractable : MonoBehaviour, IInteractable
 {
     GameObject currentInteractor;
 
-    public void Interact(GameObject ship) //the ship that interacts with this ship
+    public void Interact(GameObject boardZone) //the ship that interacts with this ship
 	{
-		if(currentInteractor !=  null)
+        GameObject ship = boardZone.transform.parent.gameObject;
+        if (currentInteractor !=  null)
         {
             if(ship.Equals(currentInteractor))
             {
-                DeBoard(ship);
+                DeBoard(boardZone);
             }
         }
         else
         {
-            Board(ship);
+            Board(boardZone);
         }
 	}
 
-    void Board(GameObject ship)
+    void Board(GameObject boardZone)
     {
-        if(ship.CompareTag("Ship"))
+        GameObject ship = boardZone.transform.parent.gameObject;
+        if (ship.CompareTag("Ship"))
         {
             // 'gameObject' the ship that holds this script
             currentInteractor = ship;
+            boardZone.GetComponent<ShipInteractor>().Interacting = true;
 
-            gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
-            gameObject.GetComponent<ConstantForce2D>().enabled = false;
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            gameObject.transform.parent.rotation = new Quaternion(0, 0, 0, 0);
+            gameObject.GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
             ship.transform.rotation = new Quaternion(0, 0, 0, 0);
             ship.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             Debug.Log("Boarding initiated!");
 
+            Door door1 = ship.GetComponentInChildren<Door>();
+            Door door2 = gameObject.transform.parent.gameObject.GetComponentInChildren <Door>();
+
+            door1.Disable();
+            door2.Disable();
+
+            gameObject.transform.parent.GetComponent<AbstractAimManager>().enabled = false;
+            gameObject.transform.parent.GetComponent<AbstractMovementManager>().enabled = false;
+            gameObject.transform.parent.GetComponent<AbstractAttackManager>().enabled = false;
+            gameObject.transform.parent.GetComponent<ShipWeaponControlManager>().enabled = false;
+
             //lock ships in place
-            ship.transform.position = gameObject.transform.position - new Vector3(10, 0, 0);
+            ship.transform.position = gameObject.transform.parent.position - new Vector3(20, 2.5f, 0);
 
             ship.GetComponent<AbstractAimManager>().enabled = false;
             ship.GetComponent<AbstractMovementManager>().enabled = false;
+            ship.GetComponent<AbstractAttackManager>().enabled = false;
+            ship.GetComponent<ShipWeaponControlManager>().enabled = false;
         }
     }
 
-    void DeBoard(GameObject ship)
+    void DeBoard(GameObject boardZone)
     {
-        currentInteractor = null;
+        GameObject ship = boardZone.transform.parent.gameObject;
 
-        gameObject.GetComponent<ConstantForce2D>().enabled = true;
+        currentInteractor = null;
+        boardZone.GetComponent<ShipInteractor>().Interacting = false;
 
         Debug.Log("Stopped Boarding");
-
-        ship.GetComponent<AbstractAimManager>().enabled = true;
-        ship.GetComponent<AbstractMovementManager>().enabled = true;
     }
 }

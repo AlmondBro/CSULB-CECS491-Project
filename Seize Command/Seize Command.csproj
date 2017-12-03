@@ -249,6 +249,7 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\ShipInteractable.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractorScripts\PlayerInteractor.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractorScripts\ShipInteractor.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\MiscellaneousScripts\Door.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAimManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAttackManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerMovementManager.cs" />
