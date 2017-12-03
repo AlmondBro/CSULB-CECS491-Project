@@ -7,7 +7,7 @@ public class GunnerSeat : AbstractSeat
     AbstractAttackManager shipAttackManager;
     ShipWeaponControlManager shipWeaponControlManager;
 
-    void Start()
+    void Awake()
     {
         shipAttackManager = GetComponentInParent<AbstractAttackManager>();
         shipWeaponControlManager = GetComponentInParent<ShipWeaponControlManager>();

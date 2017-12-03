@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeInteractTurnOnAim : AbstractSeatSubscriber
+public class OnDeInteractTurnOnAim : AbstractSeatSubscribers
 {
     void OnEnable()
     {

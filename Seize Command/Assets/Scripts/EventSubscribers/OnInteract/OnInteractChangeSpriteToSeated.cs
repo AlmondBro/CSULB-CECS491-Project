@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractChangeSpriteToSeated : AbstractSeatSubscriber
+public class OnInteractChangeSpriteToSeated : AbstractSeatSubscribers
 {
     [SerializeField] Sprite seatedSprite;
 

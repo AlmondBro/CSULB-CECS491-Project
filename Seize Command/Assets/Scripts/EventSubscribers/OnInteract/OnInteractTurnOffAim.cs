@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractTurnOffAim : AbstractSeatSubscriber
+public class OnInteractTurnOffAim : AbstractSeatSubscribers
 {
 	void OnEnable()
     {

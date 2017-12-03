@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractChangePosition : AbstractSeatSubscriber
+public class OnInteractChangePosition : AbstractSeatSubscribers
 {
     void OnEnable()
     {

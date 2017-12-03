@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeInteractChangeSpriteToStanding : AbstractSeatSubscriber
+public class OnDeInteractChangeSpriteToStanding : AbstractSeatSubscribers
 {
     [SerializeField] Sprite standingSprite;
 

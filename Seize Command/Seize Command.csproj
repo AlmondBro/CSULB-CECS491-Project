@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -216,11 +218,10 @@
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractMovementManager.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractProjectile.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeat.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeatSubscriber.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeatSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractShipSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractWeapon.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\HealthManager.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\WeaponAimManager.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeWeaponPositionToOrigin.cs" />
@@ -271,6 +272,7 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Missile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\ShotGun.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Torpedo.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\WeaponAimManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

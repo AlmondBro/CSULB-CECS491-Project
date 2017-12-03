@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbstractShipSubscribers : MonoBehaviour
+public abstract class AbstractShipSubscribers : MonoBehaviour
 {
     protected ShipWeaponControlManager control;
 
