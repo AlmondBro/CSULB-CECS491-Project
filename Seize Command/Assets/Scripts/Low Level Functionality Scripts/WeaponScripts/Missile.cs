@@ -6,13 +6,32 @@ public class Missile : AbstractWeapon
 {
     public override void Fire()
     {
-        if (proj)
-        {
-            GameObject projectileObject = Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation).gameObject;
+        Vector2 mouseLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            Collider2D projectileCollider = projectileObject.GetComponent<Collider2D>();
-            Collider2D parentCollider = transform.parent.GetComponent<Collider2D>();
-            Physics2D.IgnoreCollision(parentCollider, projectileCollider);
+        if(Physics2D.OverlapCircle(mouseLocation, 1))
+        {
+            GameObject ship = Physics2D.OverlapCircle(mouseLocation, 1).gameObject;
+            if(ship.CompareTag("Ship"))
+            {
+                base.Fire();
+            }
+        }
+    }
+
+    protected override void Instantiate()
+    {
+        GameObject projectileObject = Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation).gameObject;
+        IgnoreCollisions(projectileObject);
+    }
+
+    protected override void IgnoreCollisions(GameObject projectileObject)
+    {
+        Collider2D projectileCollider = projectileObject.GetComponent<Collider2D>();
+        Collider2D[] shipColliders = parent.GetComponentsInChildren<Collider2D>();
+
+        for (int i = 0; i < shipColliders.Length; i++)
+        {
+            Physics2D.IgnoreCollision(shipColliders[i], projectileCollider);
         }
     }
 }

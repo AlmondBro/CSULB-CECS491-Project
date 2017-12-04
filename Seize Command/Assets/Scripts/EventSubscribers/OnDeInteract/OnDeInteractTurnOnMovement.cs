@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeInteractTurnOnMovement : AbstractSeatSubscriber
+public class OnDeInteractTurnOnMovement : AbstractSeatSubscribers
 {
     void OnEnable()
     {

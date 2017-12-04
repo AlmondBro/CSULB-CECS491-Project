@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,7 +27,10 @@ public class ShipWeaponControlManager : MonoBehaviour
             DeactivateWeapon();
 
             currentWeapon = GetComponentInChildren<Cannon>();
-            onActivate(currentWeapon);
+            if(currentWeapon)
+            {
+                onActivate(currentWeapon);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -51,6 +54,14 @@ public class ShipWeaponControlManager : MonoBehaviour
             DeactivateWeapon();
 
             currentWeapon = GetComponentInChildren<Missile>();
+            onActivate(currentWeapon);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            DeactivateWeapon();
+
+            currentWeapon = GetComponentInChildren<Beam>();
             onActivate(currentWeapon);
         }
 

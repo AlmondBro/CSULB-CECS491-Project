@@ -17,6 +17,7 @@ public class PilotSeat : AbstractSeat
     {
         base.TakeASeat(interactor);
         Debug.Log("Pilot Seat On");
+		shipInteractor.enabled = true;
         shipMovementManager.enabled = true;
         shipAimManager.enabled = true;
     }
@@ -25,6 +26,7 @@ public class PilotSeat : AbstractSeat
     {
         base.LeaveSeat(interactor);
         Debug.Log("Pilot Seat Off");
+		shipInteractor.enabled = false;
         shipMovementManager.enabled = false;
         shipAimManager.enabled = false;
     }

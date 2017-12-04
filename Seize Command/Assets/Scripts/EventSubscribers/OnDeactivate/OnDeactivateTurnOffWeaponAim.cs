@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class OnDeactivateTurnOffWeaponAim : AbstractShipSubscribers
 {
-    [SerializeField] Transform shipRotation;
-
     void OnEnable()
     {
         control.onDeactivate += TurnOffWeaponAim;

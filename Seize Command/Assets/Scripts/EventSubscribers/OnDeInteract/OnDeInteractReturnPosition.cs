@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeInteractReturnPosition : AbstractSeatSubscriber
+public class OnDeInteractReturnPosition : AbstractSeatSubscribers
 {
     [SerializeField] Transform returnPosition;
 

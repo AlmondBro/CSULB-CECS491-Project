@@ -35,8 +35,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4184757366418984}
   - component: {fileID: 212002650210796344}
-  - component: {fileID: 114337573112077606}
   - component: {fileID: 114994285673138278}
+  - component: {fileID: 114337573112077606}
   m_Layer: 0
   m_Name: Disruptor
   m_TagString: Untagged
@@ -51,8 +51,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861302188780482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5000001, z: 0}
-  m_LocalScale: {x: 0.25, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4570260352685068}
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1504720707228690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.66, z: 0}
+  m_LocalPosition: {x: 0, y: 4.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4184757366418984}
@@ -95,6 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proj: {fileID: 114970698103063264, guid: 7074dd18223c431458f9115f82732475, type: 2}
   projSpawnPoint: {fileID: 4570260352685068}
+  parent: {fileID: 0}
+  cooldown: 10
 --- !u!212 &212002650210796344
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -126,11 +128,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1347283835
+  m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b036a147515292d42bfe190b6f1aaa2d, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 36a2bd5e9462c214cb9b1e2648d181e5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

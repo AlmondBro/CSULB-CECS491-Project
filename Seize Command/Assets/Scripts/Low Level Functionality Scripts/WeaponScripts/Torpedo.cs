@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Torpedo : AbstractWeapon
 {
-    public override void Fire()
+    protected override void Instantiate()
     {
-        if (proj)
-        {
-            GameObject projectileObject = Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation).gameObject;
+        GameObject projectileObject = Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation).gameObject;
+        IgnoreCollisions(projectileObject);
+    }
 
-            Collider2D projectileCollider = projectileObject.GetComponent<Collider2D>();
-            Collider2D parentCollider = transform.parent.GetComponent<Collider2D>();
-            Physics2D.IgnoreCollision(parentCollider, projectileCollider);
+    protected override void IgnoreCollisions(GameObject projectileObject)
+    {
+        Collider2D projectileCollider = projectileObject.GetComponent<Collider2D>();
+        Collider2D[] shipColliders = parent.GetComponentsInChildren<Collider2D>();
+
+        for (int i = 0; i < shipColliders.Length; i++)
+        {
+            Physics2D.IgnoreCollision(shipColliders[i], projectileCollider);
         }
     }
 }

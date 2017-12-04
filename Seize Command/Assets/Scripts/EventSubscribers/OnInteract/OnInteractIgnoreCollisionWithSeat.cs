@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractIgnoreCollisionWithSeat : AbstractSeatSubscriber
+public class OnInteractIgnoreCollisionWithSeat : AbstractSeatSubscribers
 {
     void OnEnable()
     {

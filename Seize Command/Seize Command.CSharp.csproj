@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -210,39 +212,55 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Abstract\AbstractAimManager.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractAttackManager.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractHealthManager.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractInteractionManager.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractMovementManager.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractSeat.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractSeatSubscriber.cs" />
-    <Compile Include="Assets\Scripts\Abstract\AbstractWeaponFireManager.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractAimManager.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractAttackManager.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractInteractionManager.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractMovementManager.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractProjectile.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeat.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeatSubscriber.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractShipSubscribers.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractWeapon.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\WeaponAimManager.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeWeaponPositionToOrigin.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateTurnOffWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractReapplyCollisionWithSeat.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractRemoveCurrentInteractor.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractReturnPosition.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractSetInteractingToFalse.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAttack.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnMovement.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangePosition.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangeSpriteToSeated.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractIgnoreCollisionWithSeat.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractSetInteractingToTrue.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractSetCurrentInteractor.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffAttack.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffMovement.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\GunnerSeat.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\PilotSeat.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAimManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAttackManager.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerInteractionManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerMovementManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PositionOffsetWhileSeated.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\DisruptorProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\PhysicalProjectile.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\WeaponFireManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipAimManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipAttackManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipMovementManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipWeaponControlManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Cannon.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\CharacterWeapon.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Disruptor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

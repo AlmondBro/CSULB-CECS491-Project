@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractSetCurrentInteractor : AbstractSeatSubscriber
+public class OnInteractSetCurrentInteractor : AbstractSeatSubscribers
 {
     void OnEnable()
     {
