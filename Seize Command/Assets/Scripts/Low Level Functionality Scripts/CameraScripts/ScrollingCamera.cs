@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class ScrollingCamera : MonoBehaviour
 {
-    [Header("Top Level/Deck Level changes")]
-    [SerializeField] float changeLayerViewLowPoint;
-    [SerializeField] float changeLayerViewHighPoint;
-    [SerializeField] float changeOpacityStrength;
-
-    [Space]
-
-    [Header("Zooming Boundaries")]
-    [SerializeField] int startingSize;
     [SerializeField] int lowerBound;
     [SerializeField] int upperBound;
 
-    float newSize;
+    Camera mainCamera;
 
-    Camera main;
+    bool fadedOut;
+    bool fadedIn;
 
     void Start()
     {
-        main = GetComponent<Camera>();
-        main.orthographicSize = startingSize;
+        mainCamera = GetComponent<Camera>();
+
+        fadedOut = false;
+        fadedIn = false;  
     }
 
     void FixedUpdate()
@@ -35,14 +29,11 @@ public class ScrollingCamera : MonoBehaviour
     {
         float delta = Input.GetAxis("Mouse ScrollWheel");
 
-        newSize = main.orthographicSize;
-
-        if (delta > 0f)
+        if (delta > 0f && !fadedIn)
         {
-            newSize--;
-            Check(delta);
+            
         }
-        if (delta < 0f)
+        if (delta < 0f && !)
         {
             newSize++;
             Check(delta);
@@ -54,32 +45,8 @@ public class ScrollingCamera : MonoBehaviour
         }
     }
 
-    void ChangeAlpha(float delta)
+    IEnumerator FadeOut(bool fadedOut)
     {
-        GameObject player = GetComponent<CameraController>().Player;
-        GameObject ship = player.transform.parent.parent.gameObject;
-
-        if (ship.CompareTag("Ship"))
-        {
-            SpriteRenderer[] topLevelSprites = ship.GetComponentsInChildren<SpriteRenderer>();
-            for (int i = 0; i < topLevelSprites.Length; i++)
-            {
-                if (topLevelSprites[i].sortingLayerName == "Ship Top Level")
-                {
-                    Color newColor = topLevelSprites[i].color;
-                    newColor.a += -delta * changeOpacityStrength;
-
-                    topLevelSprites[i].color = newColor;
-                }
-            }
-        }
-    }
-
-    void Check(float delta)
-    {
-        if (newSize < changeLayerViewHighPoint && newSize > changeLayerViewLowPoint)
-        {
-            ChangeAlpha(delta);
-        }
+        for(int i = )
     }
 }
