@@ -722,6 +722,17 @@ Transform:
   m_PrefabParentObject: {fileID: 4933624374155530, guid: 01b3b211bb90e2c47b901cb7f34c2e2b,
     type: 2}
   m_PrefabInternal: {fileID: 250174756}
+--- !u!114 &139023426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 139023416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9769193ebe62666498802e443bf3403e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &142956651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,7 +1111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc91e59515c54b84e9b3938da5bd4522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 139023416}
 --- !u!114 &218952695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,12 +1122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d098897b06d7e740a7ab7ca1e1c354b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeLayerViewLowPoint: 5
-  changeLayerViewHighPoint: 12
-  changeOpacityStrength: 2
-  startingSize: 15
-  lowerBound: 5
-  upperBound: 30
+  lowerBound: 10
+  upperBound: 40
+  fadeValue: 15
 --- !u!1 &226096876
 GameObject:
   m_ObjectHideFlags: 0
