@@ -4,34 +4,43 @@ using UnityEngine;
 
 public class ScrollingCamera : MonoBehaviour
 {
+    [Header("Scroll Boundaries")]
     [SerializeField] int lowerBound;
     [SerializeField] int upperBound;
 
-    [SerializeField] int fadeValue;
+    [Space]
+
+    [Header("Ship Fade Values")]
+    [SerializeField] float fadeSpeed;
+    [SerializeField] int fadeInValue;
+    [SerializeField] int fadeOutValue;
 
     float orthoSize;
 
     Camera mainCamera;
 
-    bool fadedOut;
+    IEnumerator coFadeIn;
+    IEnumerator coFadeOut;
+
     bool fadedIn;
 
     void Start()
     {
         mainCamera = GetComponent<Camera>();
-
         orthoSize = 30;
-
-        fadedOut = false;
         fadedIn = false;
 
+        GameObject ship = Utility.FindParent(PlayerReference.p);
+        SpriteRenderer[] sprites = ship.GetComponentsInChildren<SpriteRenderer>();
 
-        //Fade();
+        coFadeIn = CoFadeIn(sprites);
+        coFadeOut = CoFadeOut(sprites);
     }
 
     void FixedUpdate()
     {
         Scroll();
+        CheckToFade();
     }
 
     void Scroll()
@@ -51,23 +60,87 @@ public class ScrollingCamera : MonoBehaviour
         mainCamera.orthographicSize = orthoSize;
     }
 
-    void Fade()
+    void CheckToFade()
     {
-        GameObject ship =  Utility.FindParent(PlayerReference.p);
-        Debug.Log(ship);
-        SpriteRenderer[] sprites = ship.GetComponentsInChildren<SpriteRenderer>();
-
-        for(int i = 0; i < sprites.Length; i++)
+        if(mainCamera.orthographicSize <= fadeInValue && !fadedIn)
         {
-            if(sprites[i].sortingLayerName == "Ship Top Level")
+            FadeIn();
+        }
+        else if(mainCamera.orthographicSize >= fadeOutValue && fadedIn)
+        {
+            FadeOut();
+        }
+    }
+
+    void FadeIn()
+    {
+        if (PlayerReference.p)
+        {
+            fadedIn = true;
+
+            GameObject ship = Utility.FindParent(PlayerReference.p);
+            SpriteRenderer[] sprites = ship.GetComponentsInChildren<SpriteRenderer>();
+
+            StopCoroutine(coFadeOut);
+            coFadeIn = CoFadeIn(sprites);
+            StartCoroutine(coFadeIn);
+        }
+    }
+
+    IEnumerator CoFadeIn(SpriteRenderer[] sprites)
+    {
+        float t = 0f;
+        while (sprites[0].color.a != 0f)
+        {
+            for (int i = 0; i < sprites.Length; i++)
             {
-                Color a = sprites[i].color;
-
-                Color b = a;
-                b.a = 0f;
-
-                sprites[i].color = Color.Lerp(a, b, 1);
+                if (sprites[i].sortingLayerName == "Ship Top Level")
+                {
+                    Color a = sprites[i].color;
+                    t += Time.deltaTime * fadeSpeed;
+                    float alpha = Mathf.Lerp(a.a, 0f, t);
+                    a.a = alpha;
+                    sprites[i].color = a;
+                }
             }
+
+            yield return null;
+        }
+    }
+
+    void FadeOut()
+    {
+        if(PlayerReference.p)
+        {
+            fadedIn = false;
+
+            GameObject ship = Utility.FindParent(PlayerReference.p);
+            SpriteRenderer[] sprites = ship.GetComponentsInChildren<SpriteRenderer>();
+
+            StopCoroutine(coFadeIn);
+            coFadeOut = CoFadeOut(sprites);
+            StartCoroutine(coFadeOut);
+        }
+    }
+
+    IEnumerator CoFadeOut(SpriteRenderer[] sprites)
+    {
+        float t = 0f;
+        while (sprites[0].color.a != 1f)
+        {
+            for (int i = 0; i < sprites.Length; i++)
+            {
+                if (sprites[i].sortingLayerName == "Ship Top Level")
+                {
+                    Color a = sprites[i].color;
+                    t += Time.deltaTime * fadeSpeed;
+                    float alpha = Mathf.Lerp(a.a, 1f, t);
+                    a.a = alpha;
+                    sprites[i].color = a;
+                }
+            }
+
+            yield return null;
         }
     }
 }

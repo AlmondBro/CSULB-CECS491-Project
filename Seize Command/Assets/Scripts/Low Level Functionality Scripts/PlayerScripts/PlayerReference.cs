@@ -8,6 +8,6 @@ public class PlayerReference : MonoBehaviour
 
     void Start()
     {
-        p = gameObject;    
+        p = gameObject;
     }
 }

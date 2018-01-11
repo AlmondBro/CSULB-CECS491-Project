@@ -1122,9 +1122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d098897b06d7e740a7ab7ca1e1c354b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowerBound: 10
-  upperBound: 40
-  fadeValue: 15
+  lowerBound: 5
+  upperBound: 30
+  fadeSpeed: 0.05
+  fadeInValue: 14
+  fadeOutValue: 15
 --- !u!1 &226096876
 GameObject:
   m_ObjectHideFlags: 0
