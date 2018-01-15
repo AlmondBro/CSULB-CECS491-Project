@@ -217,6 +217,7 @@ Assets/Scripts/Interfaces/IInteractable.cs
 "Assets/Scripts/Low Level Functionality Scripts/PlayerScripts/PositionOffsetWhileSeated.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/BeamLazer.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/CannonProjectile.cs"
+"Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/CharacterProjectile.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/DisruptorProjectile.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/MissileProjectile.cs"
 "Assets/Scripts/Low Level Functionality Scripts/ProjectileScripts/ShotgunProjectile.cs"

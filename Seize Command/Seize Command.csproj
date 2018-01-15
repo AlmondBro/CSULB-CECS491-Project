@@ -310,6 +310,7 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PositionOffsetWhileSeated.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\BeamLazer.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\CannonProjectile.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\CharacterProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\DisruptorProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\MissileProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\ShotgunProjectile.cs" />
