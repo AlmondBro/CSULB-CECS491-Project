@@ -6,21 +6,14 @@ public static class Utility
 {
     public static GameObject FindParent(GameObject child)
     {
-        GameObject parent = child.transform.parent.gameObject;
+        GameObject parent;
 
         if (child.transform.parent)
         {
+            parent = child.transform.parent.gameObject;
             return FindParent(parent);
         }
-        else
-        {
-            return parent;
-        }
-    }
 
-    public static Collider2D[] FindAllColliders(GameObject parent)
-    {
-        Collider2D[] coll =  parent.GetComponentsInChildren<Collider2D>();
-        return coll;
+        return child;
     }
 }
