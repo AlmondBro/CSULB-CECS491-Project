@@ -6,7 +6,7 @@ public class PlayerReference : MonoBehaviour
 {
     public static GameObject p;
 
-    void Start()
+    void Awake()
     {
         p = gameObject;
     }
