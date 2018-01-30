@@ -4,26 +4,24 @@ using UnityEngine;
 
 public class ShipInteractable : MonoBehaviour, IInteractable
 {
+    public delegate void InteractableAction(GameObject interactor);
+    public event InteractableAction onBoard;
+
     GameObject currentInteractor;
 
-    public void Interact(GameObject boardZone) //the ship that interacts with this ship
+    public void Interact(GameObject interactor) //the ship that interacts with this ship
 	{
-        GameObject ship = boardZone.transform.parent.gameObject;
-        if (currentInteractor !=  null)
+        if (currentInteractor ==  null)
         {
-            if(ship.Equals(currentInteractor))
-            {
-                DeBoard(boardZone);
-            }
-        }
-        else
-        {
-            Board(boardZone);
+            Board(interactor);
         }
 	}
 
-    void Board(GameObject boardZone)
+    void Board(GameObject interactor)
     {
+        onBoard(interactor);
+
+        /*
         GameObject ship = boardZone.transform.parent.gameObject;
         if (ship.CompareTag("Ship"))
         {
@@ -57,8 +55,10 @@ public class ShipInteractable : MonoBehaviour, IInteractable
             ship.GetComponent<AbstractAttackManager>().enabled = false;
             ship.GetComponent<ShipWeaponControlManager>().enabled = false;
         }
+        */
     }
 
+    /*
     void DeBoard(GameObject boardZone)
     {
         GameObject ship = boardZone.transform.parent.gameObject;
@@ -68,4 +68,5 @@ public class ShipInteractable : MonoBehaviour, IInteractable
 
         Debug.Log("Stopped Boarding");
     }
+    */
 }

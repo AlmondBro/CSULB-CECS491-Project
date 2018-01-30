@@ -201,8 +201,17 @@
     <Reference Include="UnityEngine.Timeline">
       <HintPath>Library\UnityAssemblies\UnityEngine.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>Library\UnityAssemblies\UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
@@ -218,13 +227,12 @@
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractMovementManager.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractProjectile.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeat.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeatSubscriber.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractShipSubscribers.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractWeapon.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\HealthManager.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\WeaponAimManager.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipMovement.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeWeaponPositionToOrigin.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateTurnOffWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />
@@ -244,23 +252,40 @@
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\ScrollingCamera.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\GunnerSeat.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\PilotSeat.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\ShipInteractable.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractorScripts\PlayerInteractor.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractorScripts\ShipInteractor.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\MiscellaneousScripts\Door.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAimManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAttackManager.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerInteractionManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerMovementManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerReference.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PositionOffsetWhileSeated.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\BeamLazer.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\CannonProjectile.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\CharacterProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\DisruptorProjectile.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\PhysicalProjectile.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\MissileProjectile.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\ShotgunProjectile.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ProjectileScripts\TorpedoProjectile.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipAimManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipAttackManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipMovementManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\ShipScripts\ShipWeaponControlManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Beam.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Cannon.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\CharacterWeapon.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Disruptor.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Missile.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\ShotGun.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\Torpedo.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\WeaponAimManager.cs" />
+    <Compile Include="Assets\Scripts\Static Scripts\Utility.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

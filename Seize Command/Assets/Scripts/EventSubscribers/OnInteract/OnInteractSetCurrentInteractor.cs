@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractSetCurrentInteractor : AbstractSeatSubscribers
+public class OnInteractSetCurrentInteractor : AbstractSubscribers<AbstractSeat>
 {
     void OnEnable()
     {
-        seat.onInteract += SetInteractingToTrue;
+        type.onInteract += SetInteractingToTrue;
     }
 
     void OnDisable()
     {
-        if(seat)
+        if(type)
         {
-            seat.onInteract -= SetInteractingToTrue;
+            type.onInteract -= SetInteractingToTrue;
         }
     }
 
     void SetInteractingToTrue(GameObject interactor)
     {
-        seat.CurrentInteractor = interactor;
+        type.CurrentInteractor = interactor;
     }
 }

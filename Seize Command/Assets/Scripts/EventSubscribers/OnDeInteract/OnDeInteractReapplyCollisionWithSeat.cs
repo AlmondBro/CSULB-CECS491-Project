@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeInteractReapplyCollisionWithSeat : AbstractSeatSubscribers
+public class OnDeInteractReapplyCollisionWithSeat : AbstractSubscribers<AbstractSeat>
 {
     void OnEnable()
     {
-        seat.onDeInteract += ReapplyCollisionWithSeat;
+        type.onDeInteract += ReapplyCollisionWithSeat;
     }
 
     void OnDisable()
     {
-        if (seat)
+        if (type)
         {
-            seat.onDeInteract -= ReapplyCollisionWithSeat;
+            type.onDeInteract -= ReapplyCollisionWithSeat;
         }
     }
 

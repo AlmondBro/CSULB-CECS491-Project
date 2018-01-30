@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractIgnoreCollisionWithSeat : AbstractSeatSubscribers
+public class OnInteractIgnoreCollisionWithSeat : AbstractSubscribers<AbstractSeat>
 {
     void OnEnable()
     {
-        seat.onInteract += IgnoreCollisionWithSeat;
+        type.onInteract += IgnoreCollisionWithSeat;
     }
 
     void OnDisable()
     {
-        if (seat)
+        if (type)
         {
-            seat.onInteract -= IgnoreCollisionWithSeat;
+            type.onInteract -= IgnoreCollisionWithSeat;
         }
     }
 

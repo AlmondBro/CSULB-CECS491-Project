@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractChangePosition : AbstractSeatSubscribers
+public class OnInteractChangePosition : AbstractSubscribers<AbstractSeat>
 {
     void OnEnable()
     {
-        seat.onInteract += ChangePlayerPosition;
+        type.onInteract += ChangePlayerPosition;
     }
 
     void OnDisable()
     {
-        if (seat)
+        if (type)
         {
-            seat.onInteract -= ChangePlayerPosition;
+            type.onInteract -= ChangePlayerPosition;
         }
     }
 
