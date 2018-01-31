@@ -10,7 +10,8 @@ public class PlayerInteractor : AbstractInteractionManager
         {
             if(interactable != null)
             {
-                interactable.Interact(gameObject);
+                GameObject player = transform.parent.gameObject;
+                interactable.Interact(player);
             }
         }
     }  

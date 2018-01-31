@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -223,11 +225,29 @@
     <Reference Include="UnityEditor.TreeEditor">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.HoloLens">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.VR">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
@@ -270,12 +290,25 @@
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractMovementManager.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractProjectile.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeat.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeatSubscribers.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractShipSubscribers.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractWeapon.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\HealthManager.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardCallExtendBridgeAnimation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardResetEnemyShipVelocityAndRotation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardResetPlayerShipVelocityAndRotation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSetEnemyShipCurrentInteractor.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSetPlayerShipInteractingToTrue.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSnapPlayerAndEnemyShipsTogether.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipAttack.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipWeaponControl.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipAttack.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipWeaponControl.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeWeaponPositionToOrigin.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateTurnOffWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />

@@ -8,30 +8,25 @@ public abstract class AbstractSeat : MonoBehaviour, IInteractable
     public event InteractableAction onInteract;
     public event InteractableAction onDeInteract;
 
-    [SerializeField] protected ShipInteractor shipInteractor;
+    //[SerializeField] protected ShipInteractor shipInteractor;
 
-    public GameObject CurrentInteractor
-    {
-        set
-        {
-            currentInteractor = value;
-        }
-    }
-
-    GameObject currentInteractor;
+    public GameObject CurrentInteractor { get; set; }
 
     public virtual void Interact(GameObject interactor)
     {
-        if (currentInteractor != null)
+        if(interactor.CompareTag("Character"))
         {
-            if (interactor.Equals(currentInteractor))
+            if (CurrentInteractor != null)
             {
-                LeaveSeat(interactor);
+                if (interactor.Equals(CurrentInteractor))
+                {
+                    LeaveSeat(interactor);
+                }
             }
-        }
-        else
-        {
-            TakeASeat(interactor);
+            else
+            {
+                TakeASeat(interactor);
+            }
         }
     }
 

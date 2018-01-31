@@ -19,9 +19,7 @@ public class OnInteractChangePosition : AbstractSubscribers<AbstractSeat>
 
     void ChangePlayerPosition(GameObject interactor)
     {
-        Transform parent = interactor.transform.parent;
-
-        parent.position = transform.position;
-        parent.rotation = transform.rotation;
+        interactor.transform.position = transform.position;
+        interactor.transform.rotation = transform.rotation;
     }
 }

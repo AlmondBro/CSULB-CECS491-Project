@@ -21,9 +21,7 @@ public class OnDeInteractReturnPosition : AbstractSubscribers<AbstractSeat>
 
     void ReturnPosition(GameObject interactor)
     {
-        Transform parent = interactor.transform.parent;
-
-        parent.position = returnPosition.position;
-        parent.rotation = returnPosition.rotation; 
+        interactor.transform.position = returnPosition.position;
+        interactor.transform.rotation = returnPosition.rotation; 
     }
 }

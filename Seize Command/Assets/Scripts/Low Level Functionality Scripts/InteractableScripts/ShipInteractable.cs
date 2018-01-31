@@ -7,13 +7,16 @@ public class ShipInteractable : MonoBehaviour, IInteractable
     public delegate void InteractableAction(GameObject interactor);
     public event InteractableAction onBoard;
 
-    GameObject currentInteractor;
+    public GameObject CurrentInteractor { get; set; }
 
     public void Interact(GameObject interactor) //the ship that interacts with this ship
 	{
-        if (currentInteractor ==  null)
+        if(interactor.CompareTag("Ship"))
         {
-            Board(interactor);
+            if (CurrentInteractor == null)
+            {
+                Board(interactor);
+            }
         }
 	}
 
