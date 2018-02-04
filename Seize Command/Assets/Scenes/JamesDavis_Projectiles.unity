@@ -88,7 +88,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -1090,7 +1089,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -2740,6 +2738,7 @@ GameObject:
   - component: {fileID: 777027545}
   - component: {fileID: 777027544}
   - component: {fileID: 777027543}
+  - component: {fileID: 777027556}
   m_Layer: 0
   m_Name: OnBoardEventSubscribers
   m_TagString: Untagged
@@ -2901,6 +2900,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48687ff9224949e40b18d0e38e345a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &777027556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777027541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90e74223c41e3a4abd65ad6e822ac1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &816815734
@@ -3982,6 +3992,7 @@ GameObject:
   - component: {fileID: 1059982008}
   - component: {fileID: 1059982007}
   - component: {fileID: 1059982012}
+  - component: {fileID: 1059982006}
   m_Layer: 0
   m_Name: Homer Class Starship
   m_TagString: Ship
@@ -3998,7 +4009,7 @@ Animator:
   m_GameObject: {fileID: 1059982004}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f667809e4c9bf5540afa3325136c1f14, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4006,6 +4017,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1059982006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1059982004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a0e915ed09d0542b653bee7ffcd04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1059982007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5018,6 +5040,7 @@ GameObject:
   - component: {fileID: 1361060847}
   - component: {fileID: 1361060846}
   - component: {fileID: 1361060845}
+  - component: {fileID: 1361060858}
   m_Layer: 0
   m_Name: OnBoardEventSubscribers
   m_TagString: Untagged
@@ -5179,6 +5202,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48687ff9224949e40b18d0e38e345a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1361060858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361060843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90e74223c41e3a4abd65ad6e822ac1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1375814673

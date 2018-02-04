@@ -230,9 +230,23 @@
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractWeapon.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\Animation Events\OnExtendBridgeFinishedAnimationEvent.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardCallExtendBridgeAnimation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardResetEnemyShipVelocityAndRotation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardResetPlayerShipVelocityAndRotation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSetEnemyShipCurrentInteractor.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSetPlayerShipInteractingToTrue.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSnapPlayerAndEnemyShipsTogether.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipAttack.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipWeaponControl.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipAttack.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipWeaponControl.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeWeaponPositionToOrigin.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateTurnOffWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />
@@ -286,6 +300,5 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\WeaponScripts\WeaponAimManager.cs" />
     <Compile Include="Assets\Scripts\Static Scripts\Utility.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

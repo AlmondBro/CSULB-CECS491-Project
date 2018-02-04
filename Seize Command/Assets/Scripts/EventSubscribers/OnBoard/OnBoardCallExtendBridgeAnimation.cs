@@ -19,6 +19,6 @@ public class OnBoardCallExtendBridgeAnimation : AbstractSubscribers<ShipInteract
 
     void CallExtendBridgeAnimation(GameObject ship)
     {
-        ship.GetComponent<Animator>().SetBool(1, true);
+        ship.GetComponent<Animator>().SetTrigger("ExtendBridge");
     }
 }
