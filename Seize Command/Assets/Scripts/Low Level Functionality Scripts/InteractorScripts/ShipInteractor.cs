@@ -20,7 +20,7 @@ public class ShipInteractor : AbstractInteractionManager
     [SerializeField] Transform boardLocation;
     */
 
-    public bool IsBoarding { get; set; }
+    public GameObject IsBoarding { get; set; }
 
     void Awake()
 	{

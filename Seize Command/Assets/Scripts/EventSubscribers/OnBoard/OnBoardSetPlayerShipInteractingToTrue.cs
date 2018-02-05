@@ -19,6 +19,6 @@ public class OnBoardSetPlayerShipInteractingToTrue : AbstractSubscribers<ShipInt
 
     void SetPlayerShipInteractingToTrue(GameObject ship)
     {
-        ship.GetComponentInChildren<ShipInteractor>().IsBoarding = true;
+        ship.GetComponentInChildren<ShipInteractor>().IsBoarding = transform.root.gameObject;
     }
 }
