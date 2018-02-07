@@ -293,6 +293,7 @@
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractWeapon.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\Animation Events\OnExtendBridgeFinishedAnimationEvent.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardCallExtendBridgeAnimation.cs" />
@@ -318,6 +319,8 @@
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAttack.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnFinishedBoarding\OnFinishedBoardingEnableBridgeColliders.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnFinishedBoarding\OnFinishedBoardingOpenBridgeDoors.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangePosition.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangeSpriteToSeated.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractIgnoreCollisionWithSeat.cs" />

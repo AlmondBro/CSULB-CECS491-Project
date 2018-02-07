@@ -19,6 +19,11 @@ public class OnBoardSnapPlayerAndEnemyShipsTogether : AbstractSubscribers<ShipIn
 
     void SnapPlayerAndEnemyShipsTogether(GameObject ship)
     {
-        ship.transform.position = gameObject.transform.root.position - new Vector3(20, 0, 0);
+        Transform playerShipBoardingSnapLocation = ship.transform.Find("Boarding Zone").transform;
+        Transform enemyShipBoardingSnapLocation = transform.root.Find("Boarding Zone").transform;
+
+        Vector2 differenceInPositions = enemyShipBoardingSnapLocation.position - playerShipBoardingSnapLocation.position;
+        //Debug.Log(differenceInPositions);
+        ship.transform.position += (Vector3)differenceInPositions;
     }
 }
