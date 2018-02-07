@@ -13,12 +13,20 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+<<<<<<< HEAD
+    <UnityVersion>2017.3.0f3</UnityVersion>
+    <RootNamespace>
+    </RootNamespace>
+    <LangVersion>4</LangVersion>
+=======
     <UnityVersion>2017.2.0f3</UnityVersion>
     <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+>>>>>>> master
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -202,14 +210,57 @@
     <Reference Include="UnityEngine.UIAutomation">
       <HintPath>Library\UnityAssemblies\UnityEngine.UIAutomation.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+=======
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>Library\UnityAssemblies\UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+>>>>>>> master
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>C:/Users/james/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>C:/Users/james/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
+=======
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>Library\UnityAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+>>>>>>> master
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
@@ -225,12 +276,26 @@
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractMovementManager.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractProjectile.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeat.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSeatSubscribers.cs" />
-    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractShipSubscribers.cs" />
+    <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractWeapon.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\Animation Events\OnExtendBridgeFinishedAnimationEvent.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardCallExtendBridgeAnimation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardResetEnemyShipVelocityAndRotation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardResetPlayerShipVelocityAndRotation.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSetEnemyShipCurrentInteractor.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSetPlayerShipInteractingToTrue.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardSnapPlayerAndEnemyShipsTogether.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipAttack.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffEnemyShipWeaponControl.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipAim.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipAttack.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardTurnOffPlayerShipWeaponControl.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateChangeWeaponPositionToOrigin.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeactivate\OnDeactivateTurnOffWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractChangeSpriteToStanding.cs" />
@@ -240,6 +305,8 @@
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnAttack.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnDeInteract\OnDeInteractTurnOnMovement.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnFinishedBoarding\OnFinishedBoardingEnableBridgeColliders.cs" />
+    <Compile Include="Assets\Scripts\EventSubscribers\OnFinishedBoarding\OnFinishedBoardingOpenBridgeDoors.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangePosition.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractChangeSpriteToSeated.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractIgnoreCollisionWithSeat.cs" />

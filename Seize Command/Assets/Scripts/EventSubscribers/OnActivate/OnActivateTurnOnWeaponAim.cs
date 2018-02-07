@@ -3,18 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnActivateTurnOnWeaponAim : AbstractShipSubscribers
+public class OnActivateTurnOnWeaponAim : AbstractSubscribers<ShipWeaponControlManager>
 {
     void OnEnable()
     {
-        control.onActivate += TurnOnWeaponAim;
+        type.onActivate += TurnOnWeaponAim;
     }
 
     void OnDisable()
     {
-        if (control)
+        if (type)
         {
-            control.onActivate -= TurnOnWeaponAim;
+            type.onActivate -= TurnOnWeaponAim;
         }
     }
 
