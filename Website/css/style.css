@@ -1,0 +1,118 @@
+body {
+    font-family: 'Aldrich';
+    font-size: 16px;
+    background-color: black;
+    background-image: url("../media/img/darkBlueSpace.jpg");
+    background-attachment: fixed;
+    color: white;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+p {
+        margin: 0 0 0px;
+}
+
+#nav {
+    border-bottom: 3px solid #16394c;
+    background-color: black;
+    width: 100%;
+}
+
+#navLogo-li {
+	position: relative;
+	top: 23px;
+}
+
+#navLogo-li:hover {
+    background-color: transparent;
+    border: none;
+	position: relative;
+	top: 23px;
+}
+
+#nav-logo {
+	width: 160px;
+    padding: 0 20px 20px 20px;
+    margin-top: -15px;
+	vertical-align: 0%;
+}
+
+#nav ul {
+    text-align: center;
+}
+
+#nav ul li,
+#nav ul li p {
+    list-style-type: none;
+    display: inline;
+}
+
+#nav ul li {
+    font-size: 1.25em;
+    margin-right: 35px;
+    padding-bottom: 16px;
+    padding-top: 20px;
+        /* padding-left: 2px; */
+        /* padding-right: 2px; */
+        padding-right: 5px;
+        padding-left: 5px;
+}
+
+#nav ul li:hover,
+#nav ul li:active  {
+    border-bottom: 3px solid #9b7319;
+        padding-bottom: 12px;
+        background-color: #16394c;
+        padding-top: 20px;
+        /* padding-left: 2px; */
+        /* padding-right: 2px; */
+        padding-right: 5px;
+        padding-left: 5px;
+}
+
+.sectionHeader {
+    background-color: #0c242b;
+    padding: 8px 0px;
+    border-bottom: 5px solid #9b7319;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sectionRowText {
+	background-color: #16394c;
+	padding: 15px;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+footer {
+    background-color: #0c242b;
+    text-align: center;
+}
+
+#swag {
+    float: left;
+    vertical-align: middle;
+}
+
+.noGutter {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+.dlButton {
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #9b7319; 
+    color: white;
+}
