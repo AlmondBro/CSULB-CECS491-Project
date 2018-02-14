@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnFinishedBoardingOpenBridgeDoors : AbstractSubscribers<OnExtendBridgeFinishedAnimationEvent>
+public class OnFinishedBoardingOpenBridgeDoors : AbstractSubscribers<OnFinishedBridgeAnimation>
 {
     void OnEnable()
     {
@@ -19,7 +19,7 @@ public class OnFinishedBoardingOpenBridgeDoors : AbstractSubscribers<OnExtendBri
 
     void OpenBridgeDoors(GameObject interactable)
     {
-        type.GetComponentInChildren<Door>().Disable();
-        interactable.GetComponentInChildren<Door>().Disable();
+        type.GetComponentInChildren<Door>().GetComponent<BoxCollider2D>().isTrigger = true;
+        interactable.GetComponentInChildren<Door>().GetComponent<BoxCollider2D>().isTrigger = true;
     }
 }

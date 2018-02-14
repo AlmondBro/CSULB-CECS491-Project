@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnFinishedBoardingEnableBridgeColliders : AbstractSubscribers<OnExtendBridgeFinishedAnimationEvent>
+public class OnFinishedBoardingEnableBridgeColliders : AbstractSubscribers<OnFinishedBridgeAnimation>
 {
     void OnEnable()
     {
