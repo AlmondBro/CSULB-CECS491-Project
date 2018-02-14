@@ -293,7 +293,7 @@
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractSubscribers.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\AbstractWeapon.cs" />
     <Compile Include="Assets\Scripts\Abstracts and Generics\HealthManager.cs" />
-    <Compile Include="Assets\Scripts\Animation Events\OnFinishedBridgeAnimation.cs" />
+    <Compile Include="Assets\Scripts\Animation Events\OnExtendBridgeFinishedAnimationEvent.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateChangeWeapon.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnActivate\OnActivateTurnOnWeaponAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnBoard\OnBoardCallExtendBridgeAnimation.cs" />
@@ -328,11 +328,6 @@
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffAim.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffAttack.cs" />
     <Compile Include="Assets\Scripts\EventSubscribers\OnInteract\OnInteractTurnOffMovement.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnStopBoard\OnStopBoardCallReservseBridgeAnimation.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnStopBoard\OnStopBoardCloseBridgeDoors.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnStopBoard\OnStopBoardDisableBridgeColliders.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnFinishedBoarding\OnFinishedStopBoardSetEnemyShipCurrentInteractorToNull.cs" />
-    <Compile Include="Assets\Scripts\EventSubscribers\OnFinishedBoarding\OnFinishedStopBoardSetPlayerShipInteractingToFalse.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
