@@ -17,7 +17,8 @@ public class MissileProjectile : AbstractProjectile
     {
         base.Start();
         FindEnemyWithMouseClick();
-    }
+		rb.velocity += transform.root.GetComponent<Rigidbody2D>().velocity;
+	}
 
     void FixedUpdate()
     {

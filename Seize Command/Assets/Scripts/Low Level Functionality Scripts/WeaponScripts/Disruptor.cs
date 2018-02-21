@@ -9,7 +9,8 @@ public class Disruptor : AbstractWeapon
     {
         GameObject projectileObject = Instantiate(proj, projSpawnPoint.position, projSpawnPoint.rotation).gameObject;
         IgnoreCollisions(projectileObject);
-    }
+		projectileObject.transform.parent = transform.root;
+	}
 
     protected override void IgnoreCollisions(GameObject projectileObject)
     {

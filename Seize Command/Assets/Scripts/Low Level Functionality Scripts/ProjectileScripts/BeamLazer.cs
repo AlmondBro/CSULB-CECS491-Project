@@ -4,36 +4,47 @@ using UnityEngine;
 
 public class BeamLazer : AbstractProjectile
 {
-    GameObject enemyShip;
+    GameObject healthObject;
 
-    protected override void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.gameObject.CompareTag("Ship"))
+		//Debug.Log (coll.gameObject);
+		if (coll.transform.root.GetComponent<HealthManager>())
         {
-            enemyShip = coll.gameObject;
+            healthObject = coll.transform.root.gameObject;
             StartCoroutine(DamageOverTime());
         }
-    }
+	}
 
-    void OnCollisionExit2D(Collision2D coll)
+    void OnTriggerExit2D(Collider2D coll)
     {
-        if(coll.gameObject.Equals(enemyShip))
+        if(coll.gameObject.Equals(healthObject))
         {
             StopCoroutine(DamageOverTime());
         }   
     }
 
-    protected override void SendDamage(GameObject ship)
+	// Needs to be inherited from Abstract class
+	protected override void OnCollisionEnter2D(Collision2D coll)
+	{
+		
+	}
+
+    protected override void SendDamage(GameObject healthObject)
     {
-        ship.GetComponent<HealthManager>().TakeDamage(damage);
-        Destroy(gameObject);
+		if (healthObject)
+		{
+			healthObject.GetComponent<HealthManager>().TakeDamage(damage);
+		}
+        //Destroy(gameObject);
     }
 
     IEnumerator DamageOverTime()
     {
         while(true)
         {
-            SendDamage(enemyShip);
+            SendDamage(healthObject);
+			yield return new WaitForSeconds(0.2f);
         }
     }
 }

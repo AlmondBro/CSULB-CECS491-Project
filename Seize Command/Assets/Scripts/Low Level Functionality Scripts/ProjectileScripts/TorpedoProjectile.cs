@@ -15,7 +15,8 @@ public class TorpedoProjectile : AbstractProjectile
     void SetProjectileSpeed()
     {
         rb.AddForce(transform.up * forceStrength);
-    }
+		rb.velocity += transform.root.GetComponent<Rigidbody2D>().velocity;
+	}
 
     protected override void SendDamage(GameObject ship)
     {
