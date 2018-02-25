@@ -1,21 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class CameraController : MonoBehaviour
 {
     Vector3 offset;
 
+	public GameObject player;
+
 	void Start ()
     {
-        offset = transform.position - PlayerReference.p.transform.position;
+
 	}
 	
 	void LateUpdate ()
     {
-        if(PlayerReference.p)
+		if(player)
         {
-            transform.position = PlayerReference.p.transform.position + offset;
+			transform.position = player.transform.position + offset;
         }
 	}
+
+	public void lockToPlayer(GameObject p)
+	{
+		player = p;
+		offset = new Vector3 (0, 0, -10);
+	}
+		
 }
