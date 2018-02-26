@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - Ship
   - Character
+  - AI
   layers:
   - Default
   - TransparentFX

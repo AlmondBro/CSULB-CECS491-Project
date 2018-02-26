@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/JamesDavis_Projectiles.unity
+- path: Assets/Scenes/AI.unity
   isLoaded: 1
   isActive: 1
