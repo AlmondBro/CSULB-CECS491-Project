@@ -3,8 +3,17 @@ body {
     font-size: 16px;
     background-color: black;
     background-image: url("../media/img/darkBlueSpace.jpg");
-    background-attachment: fixed;
     color: white;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
 }
 
 .container-fluid {
@@ -16,9 +25,18 @@ p {
         margin: 0 0 0px;
 }
 
+.blue-to-black-gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#16394c+0,000000+71 */
+background: #16394c; /* Old browsers */
+background: -moz-linear-gradient(top, #16394c 0%, #000000 71%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #16394c 0%,#000000 71%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #16394c 0%,#000000 71%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16394c', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
 #nav {
     border-bottom: 3px solid #16394c;
-    background-color: black;
+    /* background-color: black; */
     width: 100%;
 }
 
@@ -52,27 +70,33 @@ p {
 }
 
 #nav ul li {
-    font-size: 1.25em;
+    font-size: 1.25em; /* 1.25em */
     margin-right: 35px;
     padding-bottom: 16px;
     padding-top: 20px;
         /* padding-left: 2px; */
         /* padding-right: 2px; */
-        padding-right: 5px;
-        padding-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#nav ul li a {
+    color: white;
 }
 
 #nav ul li:hover,
 #nav ul li:active  {
     border-bottom: 3px solid #9b7319;
-        padding-bottom: 12px;
-        background-color: #16394c;
-        padding-top: 20px;
-        /* padding-left: 2px; */
-        /* padding-right: 2px; */
-        padding-right: 5px;
-        padding-left: 5px;
+    padding-bottom: 12px;
+    background-color: #16394c;
+    padding-top: 20px;
+    /* padding-left: 2px; */
+    /* padding-right: 2px; */
+    padding-right: 5px;
+    padding-left: 5px;
 }
+
+.sectionRow
 
 .sectionHeader {
     background-color: #0c242b;
@@ -111,8 +135,33 @@ footer {
 .dlButton {
     text-align: center;
     margin: 0 auto;
+    border: 0;
     border-radius: 20px;
     padding: 15px;
     background-color: #9b7319; 
     color: white;
+}
+
+.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .no-gutter > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .parallax {
+    /* The image used */
+    background-image: url("https://www.universetoday.com/wp-content/uploads/2010/08/Horsehead-Nebula-at-the-Orion-Credit-Copyright-Adam-Block-Mt.-Lemmon-SkyCenter-U.-Arizona1.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
