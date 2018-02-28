@@ -1,5 +1,5 @@
 body {
-    font-family: 'Aldrich';
+    font-family: 'Aldrich', sans-serif;
     font-size: 16px;
     background-color: black;
     background-image: url("../media/img/darkBlueSpace.jpg");
@@ -119,7 +119,7 @@ ul li#navLogo-li:hover {
 }
 
 li i, .fas, .nav-li-icon {
-    color: #9b7319 !important; 
+    color: #9b7319; 
 }
 
 .sectionRow {
