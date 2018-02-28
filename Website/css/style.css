@@ -21,6 +21,15 @@ body, html {
     padding-right: 0px;
 }
 
+.container {
+	width: 1170px;
+    /* border-left: 5px solid #16394C;
+    border-right: 5px solid #16394C; */
+	padding: 0;
+	
+	background-color: #0B1E28B3;
+}
+
 p {
         margin: 0 0 0px;
 }
@@ -106,8 +115,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16394c', end
     text-align: center;
 }
 
+li i, .fas, .nav-li-icon {
+    color: #9b7319 !important; 
+}
+
 .sectionRowText {
-	background-color: #16394c;
+	/* background-color: #16394c; */
 	padding: 15px;
 	font-size: 1.25em;
 	line-height: 1.5em;
