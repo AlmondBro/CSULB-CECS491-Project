@@ -54,11 +54,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16394c', end
 	top: 23px;
 }
 
-#navLogo-li:hover {
-    background-color: transparent;
-    border: none;
-	position: relative;
-	top: 23px;
+ul li#navLogo-li:hover {
+    background-color: transparent !important;
+    box-shadow: 0 !important;
+    border: 0px !important;
+    border-radius: 0px !important
+	/* position: relative;
+    top: 23px; */
 }
 
 #nav-logo {
@@ -85,8 +87,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16394c', end
     padding-top: 20px;
         /* padding-left: 2px; */
         /* padding-right: 2px; */
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 #nav ul li a {
@@ -95,17 +97,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16394c', end
 
 #nav ul li:hover,
 #nav ul li:active  {
-    border-bottom: 3px solid #9b7319;
-    padding-bottom: 12px;
     background-color: #16394c;
-    padding-top: 20px;
-    /* padding-left: 2px; */
-    /* padding-right: 2px; */
-    padding-right: 5px;
-    padding-left: 5px;
-}
+    text-decoration: none;
 
-.sectionRow
+    border-bottom: 3px solid #9b7319;
+    box-shadow: inset 0 0 10px #2C6F92;/*Color #3177PC was 2C6F92  */
+    border-radius: 10px 10px 0 0;
+
+    padding-bottom: 12px;
+    padding-top: 20px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
 
 .sectionHeader {
     background-color: #0c242b;
@@ -119,9 +122,13 @@ li i, .fas, .nav-li-icon {
     color: #9b7319 !important; 
 }
 
+.sectionRow {
+    margin: 0;
+}
+
 .sectionRowText {
 	/* background-color: #16394c; */
-	padding: 15px;
+	padding: 15px 2em;
 	font-size: 1.25em;
 	line-height: 1.5em;
 }
@@ -146,13 +153,15 @@ footer {
  }
 
 .dlButton {
+    display: table;
+    color: white;
+    background-color: #9b7319; 
     text-align: center;
-    margin: 0 auto;
+    margin: 15px auto;
+    padding: 15px;
     border: 0;
     border-radius: 20px;
-    padding: 15px;
-    background-color: #9b7319; 
-    color: white;
+    font-size: 1.25em;
 }
 
 .no-gutter {
@@ -160,12 +169,21 @@ footer {
     margin-left: 0;
   }
   
-  .no-gutter > [class*="col-"] {
+.no-gutter > [class*="col-"] {
     padding-right: 0;
     padding-left: 0;
-  }
+}
 
-  .parallax {
+.features-list {
+    list-style-type: circle;
+    display: table;
+    font-size: 1.25em;
+	width: 50%;
+    margin: 0px auto;
+    margin-bottom: 15px;
+}
+
+.parallax {
     /* The image used */
     background-image: url("https://www.universetoday.com/wp-content/uploads/2010/08/Horsehead-Nebula-at-the-Orion-Credit-Copyright-Adam-Block-Mt.-Lemmon-SkyCenter-U.-Arizona1.jpg");
 
