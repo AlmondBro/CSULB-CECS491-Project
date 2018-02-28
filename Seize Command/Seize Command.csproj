@@ -313,9 +313,8 @@
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\Field_of_Vision.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\Got_Shoot.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\Target_Selection.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Aim_Manager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_FieldofView.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\ScrollingCamera.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\GunnerSeat.cs" />
