@@ -1,6 +1,6 @@
 body {
     font-family: 'Aldrich', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     background-color: black;
     background-image: url("../media/img/darkBlueSpace.jpg");
     color: white;
@@ -22,11 +22,10 @@ body, html {
 }
 
 .container {
-	width: 1170px;
+	/* max-width: 1170px;  */
     /* border-left: 5px solid #16394C;
     border-right: 5px solid #16394C; */
 	padding: 0;
-	
 	background-color: #0B1E28B3;
 }
 
@@ -54,11 +53,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16394c', end
 	top: 23px;
 }
 
-ul li#navLogo-li:hover {
-    background-color: transparent !important;
-    box-shadow: 0 !important;
-    border: 0px !important;
-    border-radius: 0px !important
+nav ul li#navLogo-li:hover {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0px;
+    border-radius: 0px;
 	/* position: relative;
     top: 23px; */
 }
@@ -82,7 +81,7 @@ ul li#navLogo-li:hover {
 
 #nav ul li {
     font-size: 1.25em; /* 1.25em */
-    margin-right: 35px;
+    margin-right: 1.3em; /*Was 35px*/
     padding-bottom: 16px;
     padding-top: 20px;
         /* padding-left: 2px; */
@@ -95,8 +94,10 @@ ul li#navLogo-li:hover {
     color: white;
 }
 
+.active-tab,
 #nav ul li:hover,
-#nav ul li:active  {
+#nav ul li:active,
+#nav ul li a:active {
     background-color: #16394c;
     text-decoration: none;
 
@@ -104,7 +105,7 @@ ul li#navLogo-li:hover {
     box-shadow: inset 0 0 10px #2C6F92;/*Color #3177PC was 2C6F92  */
     border-radius: 10px 10px 0 0;
 
-    padding-bottom: 12px;
+    padding-bottom: 15px;
     padding-top: 20px;
     padding-right: 8px;
     padding-left: 8px;
@@ -146,11 +147,6 @@ footer {
     float: left;
     vertical-align: middle;
 }
-
-.noGutter {
-    padding: 0 !important;
-    margin: 0 !important;
- }
 
 .dlButton {
     display: table;
@@ -196,3 +192,106 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+@media only screen and (min-width: 1357px) and (max-width: 1387px) {
+    #nav ul li {
+        font-size: 1.24em; /* 1.25em */
+        margin-right: 1.3em;
+        padding-bottom: 16px;
+        padding-top: 20px;
+            /* padding-left: 2px; */
+            /* padding-right: 2px; */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1334px) and (max-width: 1356px) {
+    #nav ul li {
+        font-size: 1.20em; /* 1.25em */
+        margin-right: 1.2em;
+        padding-bottom: 16px;
+        padding-top: 20px;
+            /* padding-left: 2px; */
+            /* padding-right: 2px; */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1289px) and (max-width: 1333px) {
+    #nav ul li {
+        font-size: 1.18em; /* 1.25em */
+        margin-right: 1.15em;
+        padding-bottom: 16px;
+        padding-top: 20px;
+            /* padding-left: 2px; */
+            /* padding-right: 2px; */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1273px) and (max-width: 1288px) {
+    #nav ul li {
+        font-size: 1.14em; /* 1.25em */
+        margin-right: 1.10em;
+        padding-bottom: 16px;
+        padding-top: 20px;
+            /* padding-left: 2px; */
+            /* padding-right: 2px; */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1221px) and (max-width: 1272px) {
+    #nav ul li {
+        font-size: 1.10em; /* 1.25em */
+        margin-right: 1.10em;
+    }
+}
+
+
+@media only screen and (min-width: 1183px) and (max-width: 1220px) {
+    #nav ul li {
+        font-size: 1.06em; /* 1.25em */
+        margin-right: 1.05em;
+    }
+}
+
+@media only screen and (min-width: 1131px) and (max-width: 1182px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (min-width: 1077px) and (max-width: 1130px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0.5em;
+    }
+}
+
+
+@media only screen and (min-width: 1050px) and (max-width: 1076px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0.25em;
+    }
+}
+
+
+@media only screen and (min-width: 1050px) and (max-width: 1076px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0.25em;
+    }
+}
+
+
+
+
+
