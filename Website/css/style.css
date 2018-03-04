@@ -291,6 +291,12 @@ footer {
     }
 }
 
+@media only screen and (min-width: 1023px) and (max-width: 1049px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0em;
+    }
+}
 
 
 
