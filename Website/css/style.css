@@ -343,13 +343,13 @@ footer {
     }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 928px) {
+@media only screen and (min-width: 900px) and (max-width: 928px) {
     #nav-logo {
         width: 105px;
     }
        
     #nav ul li {
-        font-size: 0.95em; /* 1.25em */
+        font-size: 0.9em; /* 1.25em */
         margin-right: 0em;
     }
 
@@ -359,6 +359,92 @@ nav#nav li a p.nav-item-textOnly {
 } */
 
 }
+
+@media only screen and (min-width: 737px) and (max-width: 927px) {
+    #nav-logo {
+        width: 160px;
+    }
+       
+    #nav ul li {
+        font-size: 1.25em; /* 1.25em */
+        margin-right: 1.5em;
+    }
+
+
+nav#nav li a p.nav-item-textOnly {
+    display: none;
+}
+
+}
+
+@media only screen and (min-width: 650px) and (max-width: 736px) {
+    #nav-logo {
+        width: 120px;
+    }
+       
+    #nav ul li {
+        font-size: 1.20em; /* 1.25em */
+        margin-right: 1.25em;
+    }
+
+
+nav#nav li a p.nav-item-textOnly {
+    display: none;
+}
+
+}
+
+@media only screen and (min-width: 618px) and (max-width: 649px) {
+    #nav-logo {
+        width: 120px;
+    }
+       
+    #nav ul li {
+        font-size: 1.1em; /* 1.25em */
+        margin-right: 1.2em;
+    }
+
+
+    nav#nav li a p.nav-item-textOnly {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 588px) and (max-width: 617px) {
+    #nav-logo {
+        width: 120px;
+    }
+       
+    #nav ul li {
+        font-size: 1.1em; /* 1.25em */
+        margin-right: 1em;
+    }
+
+
+    nav#nav li a p.nav-item-textOnly {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 494px) and (max-width: 587px) {
+    #nav-logo {
+        width: 110px;
+    }
+       
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0.5em;
+    }
+
+
+    nav#nav li a p.nav-item-textOnly {
+        display: none;
+    }
+}
+
+
+
 
 
 
