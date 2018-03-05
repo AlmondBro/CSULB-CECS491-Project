@@ -194,6 +194,91 @@ footer {
 }
 
 
+/* Mobile Menu CSS */
+.checkbox-hack {
+    display: none;
+}
+
+/* Rotate First Bar */
+
+#menu-toggle:checked~label .nav-menu-icon .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out second bar */
+
+#menu-toggle:checked~label .nav-menu-icon .bar2 {
+    opacity: 0;
+}
+
+#menu-toggle:checked~label .nav-menu-icon .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.nav-menu-icon {
+    display: none;
+}
+
+
+.mobile-menu-title {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-menu-title {
+        display: block;
+    }
+    
+    nav {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .nav-menu-icon {
+        float: left;
+        display: block;
+        cursor: pointer;
+        left: 10%;
+        margin: 10px auto;
+        background: #836419;
+        color: white;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    nav ul #menu-toggle:checked {
+        margin-top: 30px;
+    }
+
+   nav ul #menu-toggle:checked~li {
+        /*margin: 0 60px; */
+        display: block;
+        border: 0;
+        border-radius: 0;
+        animation: fadeIn 0.8s ease-in-out;
+        padding: 15px 0;
+   }
+
+    #nav ul li {
+        display: none;
+    }
+    
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #16394c;
+    margin: 6px auto;
+    transition: 0.4s;
+    color: white;
+}
+
+/* Media queries */ 
 @media only screen and (min-width: 1357px) and (max-width: 1387px) {
     #nav ul li {
         font-size: 1.24em; /* 1.25em */
@@ -360,7 +445,7 @@ nav#nav li a p.nav-item-textOnly {
 
 }
 
-@media only screen and (min-width: 737px) and (max-width: 927px) {
+@media only screen and (min-width: 768px) and (max-width: 927px) {
     #nav-logo {
         width: 160px;
     }
@@ -377,13 +462,13 @@ nav#nav li a p.nav-item-textOnly {
 
 }
 
-@media only screen and (min-width: 650px) and (max-width: 736px) {
+/* @media only screen and (min-width: 650px) and (max-width: 736px) {
     #nav-logo {
         width: 120px;
     }
        
     #nav ul li {
-        font-size: 1.20em; /* 1.25em */
+        font-size: 1.20em; /
         margin-right: 1.25em;
     }
 
@@ -400,7 +485,7 @@ nav#nav li a p.nav-item-textOnly {
     }
        
     #nav ul li {
-        font-size: 1.1em; /* 1.25em */
+        font-size: 1.1em; 
         margin-right: 1.2em;
     }
 
@@ -416,7 +501,7 @@ nav#nav li a p.nav-item-textOnly {
     }
        
     #nav ul li {
-        font-size: 1.1em; /* 1.25em */
+        font-size: 1.1em;
         margin-right: 1em;
     }
 
@@ -433,7 +518,7 @@ nav#nav li a p.nav-item-textOnly {
     }
        
     #nav ul li {
-        font-size: 1em; /* 1.25em */
+        font-size: 1em; 
         margin-right: 0.5em;
     }
 
@@ -441,7 +526,9 @@ nav#nav li a p.nav-item-textOnly {
     nav#nav li a p.nav-item-textOnly {
         display: none;
     }
-}
+} */
+
+
 
 
 
