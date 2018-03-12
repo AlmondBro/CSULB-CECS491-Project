@@ -314,7 +314,11 @@
     <Compile Include="Assets\Scripts\Interfaces\IFireable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Aim_Manager.cs" />
-    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_FieldofView.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_MoveTowards_Movement.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Patrol_Movement.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_Attack.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_FieldOfVision.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_Movement.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\ScrollingCamera.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractableScripts\GunnerSeat.cs" />

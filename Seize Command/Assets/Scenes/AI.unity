@@ -172,7 +172,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 100
---- !u!114 &366928673
+--- !u!114 &366928664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -180,7 +180,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 366928661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a4d16062d0bbe540b5faacc8bfacac0, type: 3}
+  m_Script: {fileID: 11500000, guid: d9eaf9e9e6e4aa840acdfba0f66d2769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &366928665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 366928661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64f0fca7dceb8b458df3314156761c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &918029414
@@ -266,6 +277,11 @@ Prefab:
       propertyPath: parent
       value: 
       objectReference: {fileID: 366928661}
+    - target: {fileID: 114907945762024622, guid: cc5f4245fd8be8641b806c16e1a869fe,
+        type: 2}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc5f4245fd8be8641b806c16e1a869fe, type: 2}
   m_IsPrefabParent: 0
@@ -421,7 +437,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4933624374155530, guid: 01b3b211bb90e2c47b901cb7f34c2e2b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1776573058148618, guid: 01b3b211bb90e2c47b901cb7f34c2e2b, type: 2}
       propertyPath: m_TagString
@@ -431,6 +447,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114367905944422612, guid: 01b3b211bb90e2c47b901cb7f34c2e2b,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 356842733}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01b3b211bb90e2c47b901cb7f34c2e2b, type: 2}
   m_IsPrefabParent: 0
@@ -518,11 +539,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4318845509948828, guid: 82e8a48ac0f84a043a2dd1f070a621f2, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1658272867754242, guid: 82e8a48ac0f84a043a2dd1f070a621f2, type: 2}
       propertyPath: m_TagString
-      value: AI
+      value: Ship
       objectReference: {fileID: 0}
     - target: {fileID: 114410178039174682, guid: 82e8a48ac0f84a043a2dd1f070a621f2,
         type: 2}

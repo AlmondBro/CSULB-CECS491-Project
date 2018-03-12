@@ -12,6 +12,7 @@ public class PositionOffsetWhileSeated : MonoBehaviour
     {
         Rigidbody2D[] rb2dArray = GetComponentsInParent<Rigidbody2D>();
         rb2dPlayer = rb2dArray[0];
+
         //rb2dShip = rb2dArray[1];
 	}
 	
