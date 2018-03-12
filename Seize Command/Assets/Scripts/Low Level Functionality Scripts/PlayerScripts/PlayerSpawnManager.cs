@@ -4,14 +4,27 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class PlayerSpawnManager : NetworkBehaviour {
-
+    
 	void Start()
 	{
 		if (!isLocalPlayer) {
 			return;
 		}
-		this.setPlayer (); 
+
+		if(isServer)
+		{
+			gameObject.transform.parent = Utility.startingShip.transform;
+		}
+		else
+		{
+		   GameObject[] startingShips = GameObject.FindGameObjectsWithTag("startingShip");
+		   gameObject.transform.parent = startingShips[0].transform;
+		}
+		this.setPlayer ();
+
+		
 	}
+
 	
 	// Update is called once per frame
 	void Update () {

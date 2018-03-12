@@ -93,6 +93,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PilotSeat
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnInteractTurnOffAim
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerAttackManager
+d1d20922fb599e19a97c7b64f5dfd4ef Assembly-CSharp.dll:.networkShipAimManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnBoardSnapPlayerAndEnemyShipsTogether
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -138,6 +139,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnFinishedBoardingEnableBridgeColliders
 2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.CameraController
 2d008e42164e3a5a022087fb7c674b35 Assembly-CSharp.dll:.Missile
+98f15b42ccb8124238ace52396d09402 Assembly-CSharp.dll:.networkShipMovementManager
 6b753804cbb4944ebb3bf663516834fa Assembly-CSharp.dll:.ShotGun
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnDeInteractTurnOnMovement
 c4d754484b2675880791dfc8626a1afe Assembly-CSharp.dll:.BeamLazer
@@ -195,6 +197,7 @@ be0c9bbe5ab85a94d63aea99216a7691 Assembly-CSharp.dll:.TorpedoProjectile
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnBoardTurnOffPlayerShipAim
 80d5fb569f9b6dc4efa87ddbaad56eb6 Assembly-CSharp.dll:.OnDeactivateChangeWeaponPositionToOrigin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShipInteractor
+1d66627560fa401a71be7eba38cf9741 Assembly-CSharp.dll:.playerShipSpawnScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShipWeaponControlManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnFinishedBoardingOpenBridgeDoors
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnDeInteractTurnOnAttack

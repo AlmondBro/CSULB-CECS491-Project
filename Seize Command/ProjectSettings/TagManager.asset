@@ -8,6 +8,8 @@ TagManager:
   - Ship
   - Character
   - Projectile
+  - startingShip
+  - locator
   layers:
   - Default
   - TransparentFX
