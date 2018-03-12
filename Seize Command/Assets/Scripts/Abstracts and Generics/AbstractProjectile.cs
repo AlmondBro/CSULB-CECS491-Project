@@ -15,6 +15,8 @@ public abstract class AbstractProjectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         StartCoroutine(CoDestroyOverTime());
+
+		GetComponent<AudioSource>().Play ();
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D coll)
