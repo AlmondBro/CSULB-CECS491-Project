@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class ModuleInteractable : MonoBehaviour, IInteractable
 {
-    IRepairable repairSatation;
-
-    void Start()
-    {
-        repairSatation = GetComponentInChildren<IRepairable>();
-    }
+    [SerializeField] IRepairable repairSatation;
 
     public void Interact(GameObject interactor)
     {

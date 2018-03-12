@@ -11,7 +11,7 @@ public abstract class AbstractWeapon: MonoBehaviour, IFireable
 
     bool readyToFire;
 
-    void Start()
+    protected virtual void Start()
     {
         readyToFire = true;
     }

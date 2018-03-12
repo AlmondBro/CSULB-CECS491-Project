@@ -19,7 +19,7 @@ TagManager:
   - 
   - Projectiles
   - Furniture
-  - 
+  - Shield
   - 
   - 
   - 
@@ -53,4 +53,7 @@ TagManager:
     locked: 0
   - name: Projectiles
     uniqueID: 4229240797
+    locked: 0
+  - name: Shield
+    uniqueID: 4117852619
     locked: 0

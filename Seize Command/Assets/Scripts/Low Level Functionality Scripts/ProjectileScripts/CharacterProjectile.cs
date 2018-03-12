@@ -27,9 +27,10 @@ public class CharacterProjectile : AbstractProjectile {
         rb.velocity = transform.up * projectileSpeed;
     }
 
-    protected override void SendDamage(GameObject ship)
+    protected override void SendDamage(GameObject damagedObject)
     {
-        ship.GetComponent<HealthManager>().TakeDamage(damage);
+        IDamageable damageable = damagedObject.GetComponent<IDamageable>();
+        damageable.TakeDamage(damage);
         Destroy(gameObject);
     }
 }

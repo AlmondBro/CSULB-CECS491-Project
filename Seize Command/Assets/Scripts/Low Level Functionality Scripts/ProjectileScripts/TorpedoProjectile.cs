@@ -17,9 +17,10 @@ public class TorpedoProjectile : AbstractProjectile
         rb.AddForce(transform.up * forceStrength);
     }
 
-    protected override void SendDamage(GameObject ship)
+    protected override void SendDamage(GameObject damagedObject)
     {
-        ship.GetComponent<HealthManager>().TakeDamage(damage);
+        IDamageable damageable = damagedObject.GetComponent<IDamageable>();
+        damageable.TakeDamage(damage);
         Destroy(gameObject);
     }
 }
