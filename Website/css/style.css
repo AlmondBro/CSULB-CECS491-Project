@@ -247,6 +247,9 @@ footer {
 
     #nav ul {
         text-align: unset;
+        display: block;
+        max-height: 300px;
+        overflow-y: auto;
     }
 
     .nav-menu-icon {
@@ -275,11 +278,38 @@ footer {
         border-radius: 0;
         animation: fadeIn 0.8s ease-in-out;
         padding: 15px 0;
+        width: 100%;
    }
 
-   nav ul #menu-toggle:checked+p.mobile-menu-title {
+   nav ul #menu-toggle:checked~a.mobile-menu-title {
        display: none;
    }
+
+   nav ul #menu-toggle:checked + label > div.nav-menu-icon {
+       position: fixed; 
+   }
+
+   a.mobile-menu-title {
+       color: white;
+   }
+
+   a.mobile-menu-title:hover {
+        text-decoration: none;
+        /* background-color: black;
+        border-left: 2px solid #9b7319; 
+        border-right: 2px solid #9b7319; 
+        border-bottom: 2px solid #9b7319;
+        padding: 12px; */
+    }
+   .mobile-menu-title p {
+       display: inline-block;
+   }
+
+   .mobile-menu-title img {
+       width: 100px;
+       display: inline-block;
+   }
+
     #nav ul li {
         display: none;
     }
