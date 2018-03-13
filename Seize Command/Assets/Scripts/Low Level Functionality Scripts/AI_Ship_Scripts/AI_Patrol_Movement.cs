@@ -10,6 +10,8 @@ public class AI_Patrol_Movement : MonoBehaviour
     float height;
     bool patrol;
 
+    float rotation_speed = 57f;
+
     float x_position;
     float y_position;
 
@@ -41,6 +43,8 @@ public class AI_Patrol_Movement : MonoBehaviour
         float y = Mathf.Sin(timeCounter) * height;
         float z = 0;
         AI_Ship.transform.position = new Vector3(x+x_position, y+y_position, z);
+
+        transform.Rotate(Vector3.forward * rotation_speed * Time.deltaTime);
     }
 
     public void SetPatrol()
