@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerInteractor : AbstractInteractionManager
 {
+    public GameObject Weapon;
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E))
@@ -14,5 +16,5 @@ public class PlayerInteractor : AbstractInteractionManager
                 interactable.Interact(player);
             }
         }
-    }  
+    }
 }
