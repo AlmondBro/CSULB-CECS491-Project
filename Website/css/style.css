@@ -252,6 +252,11 @@ footer {
         overflow-y: auto;
     }
 
+    nav ul li a {
+        position: relative;
+        left: 1.5em;
+    }
+
     .nav-menu-icon {
         float: left;
         display: inline-block;
@@ -581,7 +586,29 @@ nav#nav li a p.nav-item-textOnly {
     }
 } */
 
+@media only screen and (min-width: 596px) and (max-width: 645px) {
+    .mobile-menu-title p {
+        font-size: 0.9em;
+    }
+} 
 
+@media only screen and (min-width: 570px) and (max-width: 595px) {
+    .mobile-menu-title p {
+        font-size: 0.8em;
+    }
+} 
+
+@media only screen and (min-width: 558px) and (max-width: 569px) {
+    .mobile-menu-title p {
+        font-size: 0.79em;
+    }
+} 
+
+@media only screen and (max-width: 557px) {
+    .mobile-menu-title p {
+        display: none;;
+    }
+} 
 
 
 
