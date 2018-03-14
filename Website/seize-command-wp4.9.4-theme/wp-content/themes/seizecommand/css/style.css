@@ -1,0 +1,747 @@
+body {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 18px;
+    background-color: black;
+    background-image: url("../media/img/darkBlueSpace.jpg");
+    color: white;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.container {
+	/* max-width: 1170px;  */
+    /* border-left: 5px solid #16394C;
+    border-right: 5px solid #16394C; */
+	padding: 0;
+    background-color: #0B1E28B3;
+}
+
+p {
+        margin: 0 0 0px;
+}
+
+.blue-to-black-gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#16394c+0,000000+71 */
+background: #16394c; /* Old browsers */
+background: -moz-linear-gradient(top, #16394c 0%, #000000 71%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #16394c 0%,#000000 71%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #16394c 0%,#000000 71%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16394c', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+#nav {
+    border-bottom: 3px solid #16394c;
+    width: 100%;
+}
+
+#navLogo-li {
+	position: relative;
+	top: 23px;
+}
+
+nav ul li#navLogo-li:hover {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0px;
+    border-radius: 0px;
+	/* position: relative;
+    top: 23px; */
+}
+
+#nav-logo {
+	width: 160px;
+    padding: 0 20px 20px 20px;
+    margin-top: -15px;
+	vertical-align: 0%;
+}
+
+#nav ul {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: table;
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li,
+#nav ul li p {
+    list-style-type: none;
+    display: inline;
+}
+
+#nav ul li {
+    font-size: 1.25em; /* 1.25em */
+    margin-right: 1.3em; /*Was 35px*/
+    padding-bottom: 3px;
+    padding-top: 20px;
+        /* padding-left: 2px; */
+        /* padding-right: 2px; */
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+#nav ul li a {
+    color: white;
+}
+
+.active-tab,
+#nav ul li:hover,
+#nav ul li:active,
+#nav ul li a:active {
+    background-color: #16394c;
+    text-decoration: none;
+
+    border-bottom: 3px solid #9b7319;
+    box-shadow: inset 0 0 10px #2C6F92;/*Color #3177PC was 2C6F92  */
+    border-radius: 10px 10px 0 0;
+/* 
+    padding-bottom: 12px; */
+    padding-top: 20px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.sectionHeader {
+    background-color: #0c242b;
+    padding: 8px 0px;
+    border-bottom: 5px solid #9b7319;
+    margin: 0 auto;
+    text-align: center;
+}
+
+li i, .fas, .nav-li-icon {
+    color: #9b7319; 
+}
+
+.sectionRow {
+    margin: 0;
+}
+
+.sectionRowText {
+	/* background-color: #16394c; */
+	padding: 15px 2em;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+footer {
+    background-color: #0c242b;
+    text-align: center;
+}
+
+#swag {
+    float: left;
+    vertical-align: middle;
+}
+
+.dlButton {
+    display: table;
+    color: white;
+    background-color: #9b7319; 
+    text-align: center;
+    margin: 15px auto;
+    padding: 15px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1.25em;
+}
+
+.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+.no-gutter > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.features-list {
+    list-style-type: circle;
+    display: table;
+    font-size: 1.25em;
+	width: 50%;
+    margin: 0px auto;
+    margin-bottom: 15px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("https://www.universetoday.com/wp-content/uploads/2010/08/Horsehead-Nebula-at-the-Orion-Credit-Copyright-Adam-Block-Mt.-Lemmon-SkyCenter-U.-Arizona1.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Mobile Menu CSS */
+.checkbox-hack {
+    display: none;
+}
+
+/* Rotate First Bar */
+
+#menu-toggle:checked~label .nav-menu-icon .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out second bar */
+
+#menu-toggle:checked~label .nav-menu-icon .bar2 {
+    opacity: 0;
+}
+
+#menu-toggle:checked~label .nav-menu-icon .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.nav-menu-icon {
+    display: none;
+}
+
+.mobile-menu-title {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+	html div#wpadminbar {
+		position: fixed;
+	}
+	
+    .container {
+        margin-top: 79px;
+    }
+
+    .mobile-menu-title {
+        font-size: 1.5em;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    nav {
+        position: fixed;
+        z-index: 1;
+    }
+
+    #nav ul {
+        text-align: unset;
+        display: block;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    nav ul li a {
+        position: relative;
+        left: 1.5em;
+    }
+
+    .nav-menu-icon {
+        float: left;
+        display: inline-block;
+        cursor: pointer;
+        left: 10%;
+        margin: 10px auto;
+        background: black;
+        color: white;
+        padding: 8px;
+        border-radius: 10px;
+        border: 2px solid #9b7319;
+        text-align: left;
+        position: relative;
+    }
+
+    nav ul #menu-toggle:checked {
+        margin-top: 30px;
+    }
+
+   nav ul #menu-toggle:checked~li {
+        display: block;
+        text-align: center;
+        border: 0;
+        border-radius: 0;
+        animation: fadeIn 0.8s ease-in-out;
+        padding: 15px 0;
+        width: 100%;
+   }
+
+   nav ul #menu-toggle:checked~a.mobile-menu-title {
+       display: none;
+   }
+
+   nav ul #menu-toggle:checked + label > div.nav-menu-icon {
+       position: fixed; 
+   }
+
+   a.mobile-menu-title {
+       color: white;
+   }
+
+   a.mobile-menu-title:hover {
+        text-decoration: none;
+        /* background-color: black;
+        border-left: 2px solid #9b7319; 
+        border-right: 2px solid #9b7319; 
+        border-bottom: 2px solid #9b7319;
+        padding: 12px; */
+    }
+   .mobile-menu-title p {
+       display: inline-block;
+   }
+
+   .mobile-menu-title img {
+       width: 100px;
+       display: inline-block;
+   }
+
+    #nav ul li {
+        display: none;
+    }
+
+    nav#nav li#navLogo-li {
+        display: none;
+    }
+    
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px auto;
+    transition: 0.4s;
+    color: white;
+}
+
+/* Media queries */ 
+@media only screen and (min-width: 1357px) and (max-width: 1387px) {
+    #nav ul li {
+        font-size: 1.21em; /* 1.25em */
+        margin-right: 1.3em;
+        padding-top: 20px;
+            /* padding-left: 2px; */
+            /* padding-right: 2px; */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1334px) and (max-width: 1356px) {
+    #nav ul li {
+        font-size: 1.20em; /* 1.25em */
+        margin-right: 1.2em;
+        padding-top: 20px;
+            /* padding-left: 2px; */
+            /* padding-right: 2px; */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1289px) and (max-width: 1333px) {
+    #nav ul li {
+        font-size: 1.18em; /* 1.25em */
+        margin-right: 1.15em;
+        padding-top: 20px;
+            /* padding-left: 2px; */
+            /* padding-right: 2px; */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1273px) and (max-width: 1288px) {
+    #nav ul li {
+        font-size: 1.14em; /* 1.25em */
+        margin-right: 1.10em;
+        padding-top: 20px;
+            /* padding-left: 2px; */
+            /* padding-right: 2px; */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1221px) and (max-width: 1272px) {
+    #nav ul li {
+        font-size: 1.10em; /* 1.25em */
+        margin-right: 1.10em;
+    }
+}
+
+
+@media only screen and (min-width: 1183px) and (max-width: 1220px) {
+    #nav ul li {
+        font-size: 1.06em; /* 1.25em */
+        margin-right: 1.05em;
+    }
+}
+
+@media only screen and (min-width: 1131px) and (max-width: 1182px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (min-width: 1077px) and (max-width: 1130px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0.5em;
+    }
+}
+
+
+@media only screen and (min-width: 1050px) and (max-width: 1076px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0.25em;
+    }
+}
+
+
+@media only screen and (min-width: 1050px) and (max-width: 1076px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0.25em;
+    }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1049px) {
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0em;
+    }
+}
+
+@media only screen and (min-width: 988px) and (max-width: 1022px) {
+    #nav-logo {
+        width: 125px;
+    }
+       
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0em;
+    }
+}
+
+
+@media only screen and (min-width: 978px) and (max-width: 987px) {
+    #nav-logo {
+        width: 115px;
+    }
+       
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0em;
+    }
+}
+
+@media only screen and (min-width: 968px) and (max-width: 977px) {
+    #nav-logo {
+        width: 105px;
+    }
+       
+    #nav ul li {
+        font-size: 1em; /* 1.25em */
+        margin-right: 0em;
+    }
+}
+
+@media only screen and (min-width: 929px) and (max-width: 967px) {
+    #nav-logo {
+        width: 105px;
+    }
+       
+    #nav ul li {
+        font-size: 0.95em; /* 1.25em */
+        margin-right: 0em;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 928px) {
+    #nav-logo {
+        width: 105px;
+    }
+       
+    #nav ul li {
+        font-size: 0.9em; /* 1.25em */
+        margin-right: 0em;
+    }
+
+/* 
+nav#nav li a p.nav-item-textOnly {
+    display: none;
+} */
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 927px) {
+    #nav-logo {
+        width: 160px;
+    }
+       
+    #nav ul li {
+        font-size: 1.25em; /* 1.25em */
+        margin-right: 1.5em;
+    }
+
+    #navLogo-li {
+        display: none;
+    }
+
+
+    nav#nav li a p.nav-item-textOnly {
+        display: none;
+    }
+
+}
+
+/* @media only screen and (min-width: 650px) and (max-width: 736px) {
+    #nav-logo {
+        width: 120px;
+    }
+       
+    #nav ul li {
+        font-size: 1.20em; /
+        margin-right: 1.25em;
+    }
+
+
+nav#nav li a p.nav-item-textOnly {
+    display: none;
+}
+
+}
+
+@media only screen and (min-width: 618px) and (max-width: 649px) {
+    #nav-logo {
+        width: 120px;
+    }
+       
+    #nav ul li {
+        font-size: 1.1em; 
+        margin-right: 1.2em;
+    }
+
+
+    nav#nav li a p.nav-item-textOnly {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 588px) and (max-width: 617px) {
+    #nav-logo {
+        width: 120px;
+    }
+       
+    #nav ul li {
+        font-size: 1.1em;
+        margin-right: 1em;
+    }
+
+
+    nav#nav li a p.nav-item-textOnly {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 494px) and (max-width: 587px) {
+    #nav-logo {
+        width: 110px;
+    }
+       
+    #nav ul li {
+        font-size: 1em; 
+        margin-right: 0.5em;
+    }
+
+
+    nav#nav li a p.nav-item-textOnly {
+        display: none;
+    }
+} */
+
+/* 596 to 605 Not responsive */
+
+@media only screen and (min-width: 596px) and (max-width: 648px) {
+    .mobile-menu-title > p {
+        font-size: 0.85em;
+    }
+} 
+
+@media only screen and (min-width: 570px) and (max-width: 595px) {
+    .mobile-menu-title p {
+        font-size: 0.8em;
+    }
+} 
+
+@media only screen and (min-width: 558px) and (max-width: 569px) {
+    .mobile-menu-title p {
+        font-size: 0.79em;
+    }
+} 
+
+@media only screen and (max-width: 557px) {
+    .mobile-menu-title p {
+        display: none;;
+    }
+} 
+
+html div#wpadminbar {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#16394c+0,000000+71 */
+background: #16394c; /* Old browsers */
+
+}
+
+
+/* Custom login */
+/* Custom CSS to style the login page */
+
+.login h1 a {
+	background-image: url('../assets/images/Car-Detailing-Logo-PNG.png');
+	background-image: none, url('../assets/images/car-detailing-logo-svg.svg');
+	background-size: 400px 150px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	color: #999;
+	width: 400px;
+	height: 150px; 
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.3em;
+	margin: 0 auto 25px;
+	padding: 0;
+	text-decoration: none;
+	text-indent: -9999px;
+	outline: none;
+	overflow: hidden;
+	display: table;
+}
+
+/*
+body.login div#login h1 a {
+    background-image: url('../assets/images/Car-Detailing-Logo-PNG.png');
+	background-image: none, url('../assets/images/car-detailing-logo-svg.svg');
+}
+*/
+
+body .login .login-action-login .wp-core-ui  {
+    background: #16394c; /* Old browsers */
+    background: -moz-linear-gradient(top, #16394c 0%, #000000 71%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #16394c 0%,#000000 71%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #16394c 0%,#000000 71%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16394c', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+/* Change background of login screen */
+body.login {
+  background-image: url('https://www.universetoday.com/wp-content/uploads/2010/08/Horsehead-Nebula-at-the-Orion-Credit-Copyright-Adam-Block-Mt.-Lemmon-SkyCenter-U.-Arizona1.jpg');
+  background-color: #16394C;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.login form {
+	border: 3px #4395C2 solid;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.login label {
+  font-size: 1em;
+  color: #16394C;
+}
+
+.login input[type="text"]{
+  background-color: #EBEDED;
+  border: 1px solid #526f7f;
+  -webkit-border-radius: 5px;
+}
+
+.login input[type="password"]{
+  background-color: #EBEDED;
+  border: 1px solid #526f7f;
+  -webkit-border-radius: 5px;
+}
+
+/* Customize the login button */
+.login .button-primary {
+	display: table;
+	margin: auto 0.25%;
+	width: auto;
+	list-style: none;
+	border: none;
+	color: #ECECEC;
+	font-size: 1.2em;
+	border-radius: 10px;
+	background-color: #16394C;
+	padding: 1.5% 2%;
+}
+
+.login .button-primary:hover,
+.login .button-primary:active  {
+  background-color:#4395C2;
+}
+
+/* Remove the text shadow */
+.wp-core-ui .button-primary,
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:active {
+	text-shadow: none;
+	box-shadow: none;
+}
+/* Remove back to blog text */
+p#backtoblog {
+  display: none;
+}
+
+.login #backtoblog a, 
+.login #nav a {
+	color: #ECECEC;
+} 
+
+
+
+
+
+
+
+
+
+
+
