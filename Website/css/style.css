@@ -231,7 +231,7 @@ footer {
 
 @media only screen and (max-width: 767px) {
     .container {
-        margin-top: 78px;
+        margin-top: 79px;
     }
 
     .mobile-menu-title {
@@ -590,9 +590,11 @@ nav#nav li a p.nav-item-textOnly {
     }
 } */
 
-@media only screen and (min-width: 596px) and (max-width: 645px) {
-    .mobile-menu-title p {
-        font-size: 0.9em;
+/* 596 to 605 Not responsive */
+
+@media only screen and (min-width: 596px) and (max-width: 648px) {
+    .mobile-menu-title > p {
+        font-size: 0.85em;
     }
 } 
 
