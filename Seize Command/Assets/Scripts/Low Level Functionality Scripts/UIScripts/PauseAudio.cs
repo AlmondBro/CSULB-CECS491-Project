@@ -19,7 +19,7 @@ public class PauseAudio : MonoBehaviour {
 	}
 	public void SetVolume(float value)
 	{
-		GetComponent<AudioSource> ().pitch = value;
-		Debug.Log (value);
+		//GetComponent<AudioSource> ().pitch = value;
+		//Debug.Log (value);
 	}
 }

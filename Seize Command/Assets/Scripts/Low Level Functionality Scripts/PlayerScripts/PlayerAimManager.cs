@@ -7,7 +7,8 @@ public class PlayerAimManager : AbstractAimManager
 {
     void Update()
     {
-        Aim();
+		if(!PauseMenu.GameIsPaused)
+        	Aim();
     }
 
     protected override void Aim()

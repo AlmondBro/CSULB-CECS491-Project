@@ -638,7 +638,7 @@ Prefab:
     - target: {fileID: 11400000, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1964532756}
+      objectReference: {fileID: 218952696}
     - target: {fileID: 11400000, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetVolume
@@ -1314,6 +1314,7 @@ GameObject:
   - component: {fileID: 218952690}
   - component: {fileID: 218952694}
   - component: {fileID: 218952695}
+  - component: {fileID: 218952696}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1411,6 +1412,17 @@ MonoBehaviour:
   fadeSpeed: 0.05
   fadeInValue: 14
   fadeOutValue: 15
+--- !u!114 &218952696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218952689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13109251c740e7d4591654e8438d9089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &226096876
 GameObject:
   m_ObjectHideFlags: 0
@@ -5061,7 +5073,7 @@ GameObject:
   - component: {fileID: 999689875}
   - component: {fileID: 999689879}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Pause Menu Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
