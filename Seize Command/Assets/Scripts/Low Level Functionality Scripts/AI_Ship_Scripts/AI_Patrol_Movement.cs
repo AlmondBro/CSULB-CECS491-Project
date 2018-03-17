@@ -8,7 +8,6 @@ public class AI_Patrol_Movement : MonoBehaviour
     float timeCounter = 0;
     float size;
     float height;
-    bool patrol;
 
     float rotation_speed = 57f;
 
@@ -20,7 +19,6 @@ public class AI_Patrol_Movement : MonoBehaviour
         AI_Ship = GetComponent<Rigidbody2D>();
         size = 50;
         height = 50;
-        patrol = true;
 
         x_position = transform.position.x;
         y_position = transform.position.y;
@@ -28,15 +26,11 @@ public class AI_Patrol_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (patrol)
-        {
-            Patrol();
-        }
+        Patrol();
     }
 
     void Patrol()
     {
-        
         timeCounter += Time.deltaTime;
 
         float x = Mathf.Cos(timeCounter) * size;
@@ -45,14 +39,5 @@ public class AI_Patrol_Movement : MonoBehaviour
         AI_Ship.transform.position = new Vector3(x+x_position, y+y_position, z);
 
         transform.Rotate(Vector3.forward * rotation_speed * Time.deltaTime);
-    }
-
-    public void SetPatrol()
-    {
-        patrol = true;
-    }
-    public void StopPatrol()
-    {
-        patrol = false;
     }
 }
