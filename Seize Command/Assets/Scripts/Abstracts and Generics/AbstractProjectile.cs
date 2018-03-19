@@ -19,10 +19,9 @@ public abstract class AbstractProjectile : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log(coll.gameObject);
-        if (coll.gameObject.GetComponent(typeof(IDamageable)))
+        if (coll.collider.transform.parent.GetComponent(typeof(IDamageable)))
         {
-            GameObject damagedObject = coll.gameObject;
+            GameObject damagedObject = coll.collider.transform.parent.gameObject;
             SendDamage(damagedObject);
         }
     }

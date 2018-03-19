@@ -12,14 +12,19 @@ public class ShieldHealthManager : MonoBehaviour, IDamageable, IRepairable
     [SerializeField] float waitToRepairTime;
 
     IEnumerator coRegenShield;
+    SpriteRenderer sprite;
 
     float maxHealth;
     float minHealth;
+    float maxColor;
+    float minColor;
     bool disabled;
     bool canRepair;
 
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
+
         maxHealth = health;
         minHealth = 0;
         canRepair = true;
@@ -45,6 +50,7 @@ public class ShieldHealthManager : MonoBehaviour, IDamageable, IRepairable
     void ChangeHealth(float change)
     {
         health += change;
+        //Mathf.Clamp(sprite.color.a, );
         Mathf.Clamp(health, minHealth, maxHealth);
         CheckHealth();
     }
