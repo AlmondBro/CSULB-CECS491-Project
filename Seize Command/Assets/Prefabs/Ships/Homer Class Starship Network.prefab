@@ -3411,6 +3411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipTransform: {fileID: 4086540577994926}
   rotation_speed: 10
+  inSeat: 1
 --- !u!212 &212113893877278876
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -18,6 +18,7 @@ public class playerShipSpawnScript : NetworkBehaviour {
 
 		var ship = (GameObject) Instantiate(shipPrefab,spawnPosition,spawnRotation);
 		NetworkServer.Spawn(ship);
+		
 		Utility.startingShip = ship;
 	}
 	
@@ -25,4 +26,5 @@ public class playerShipSpawnScript : NetworkBehaviour {
 	void Update () {
 		
 	}
+
 }

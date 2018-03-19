@@ -11,15 +11,27 @@ public class networkShipAimManager : AbstractAimManager {
 	[SerializeField] Transform shipTransform;
     [SerializeField] float rotation_speed;
 
+    public bool inSeat;
     void Start()
     {
-        enabled = false; 
-        syncShipRot = transform.rotation;  
+        //enabled = false; 
+        inSeat = false; 
     }
     void FixedUpdate()
-    {
-        RpcTransmitRotation();
+    {   
+        if(inSeat)
+        {
         Aim();
+        }
+
+        if(isServer)
+        {
+        RpcUpdateRot();
+        }
+        else
+        {
+        CmdUpdateRot();
+        }
     }
 
     protected override void Aim()
@@ -33,11 +45,15 @@ public class networkShipAimManager : AbstractAimManager {
         syncShipRot = Quaternion.RotateTowards(transform.rotation, rot, rotation_speed * Time.deltaTime);
     }
 
-	[ClientRpc]
-    void RpcTransmitRotation()
+    [ClientRpc]
+    public void RpcUpdateRot()
     {
         transform.rotation = syncShipRot;
     }
 
-
+    [Command]
+    public void CmdUpdateRot()
+    {
+        RpcUpdateRot();
+    }
 }

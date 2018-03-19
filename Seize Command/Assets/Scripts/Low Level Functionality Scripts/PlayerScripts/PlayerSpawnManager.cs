@@ -11,15 +11,11 @@ public class PlayerSpawnManager : NetworkBehaviour {
 			return;
 		}
 
-		if(isServer)
-		{
-			gameObject.transform.parent = Utility.startingShip.transform;
-		}
-		else
-		{
-		   GameObject[] startingShips = GameObject.FindGameObjectsWithTag("startingShip");
-		   gameObject.transform.parent = startingShips[0].transform;
-		}
+		
+        GameObject[] startingShips = GameObject.FindGameObjectsWithTag("startingShip");
+        gameObject.transform.parent = startingShips[0].transform;
+		
+
 		this.setPlayer ();
 
 		
@@ -35,4 +31,5 @@ public class PlayerSpawnManager : NetworkBehaviour {
 	{
 		Camera.main.GetComponent<CameraController> ().lockToPlayer (gameObject);
 	}
+
 }
