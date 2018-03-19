@@ -1,0 +1,4 @@
+In this sprint, I focus on creating a Main Menu UI for Seize Command.
+The menu includes different selections like Start [Co-op, Team Deathmatch], Leaderboard, Options [Video, Audio, Control], and Quit.
+There is also two different Lobby UI for Co-op and Team Deathmatch.
+The main goal is to create a foundation UI for later development which will actually function with the main game.
