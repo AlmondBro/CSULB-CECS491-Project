@@ -288,6 +288,7 @@
     <Compile Include="Assets\Unity UI Sample\Scripts\DragMe.cs" />
     <Compile Include="Assets\Unity UI Sample\Scripts\DragPanel.cs" />
     <Compile Include="Assets\Unity UI Sample\Scripts\DropMe.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\InputToString.cs" />
     <Compile Include="Assets\Unity UI Sample\Scripts\PanelManager.cs" />
     <Compile Include="Assets\Unity UI Sample\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Unity UI Sample\Scripts\ResizePanel.cs" />
