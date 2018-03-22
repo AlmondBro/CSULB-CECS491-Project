@@ -282,26 +282,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Unity UI Sample\Scripts\ActiveStateToggler.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\ApplicationManager.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\ChangeColor.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\DragMe.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\DragPanel.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\DropMe.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\InputToString.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\PanelManager.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\QuitOnClick.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\ResizePanel.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\ScrollDetailTexture.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\SelectOnInput.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\ShowSliderValue.cs" />
-    <Compile Include="Assets\Unity UI Sample\Scripts\TiltWindow.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\ActiveStateToggler.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\ApplicationManager.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\DragMe.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\DragPanel.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\DropMe.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\InputToString.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\PanelManager.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\QuitOnClick.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\ResizePanel.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\ScrollDetailTexture.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\SelectOnInput.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\ShowSliderValue.cs" />
+    <Compile Include="Assets\Main Menu UI\Scripts\TiltWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Unity UI Sample\Fonts\Jupiter\LICENSE.txt" />
-    <None Include="Assets\Unity UI Sample\Fonts\aldrich\OFL.txt" />
-    <None Include="Assets\Unity UI Sample\Materials\UI-Default-No-Alpha.shader" />
-    <None Include="Assets\Unity UI Sample\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+    <None Include="Assets\Main Menu UI\Fonts\Jupiter\LICENSE.txt" />
+    <None Include="Assets\Main Menu UI\Fonts\aldrich\OFL.txt" />
+    <None Include="Assets\Main Menu UI\Materials\UI-Default-No-Alpha.shader" />
+    <None Include="Assets\Main Menu UI\Textures and Sprites\SF UI\Background\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
