@@ -8,18 +8,19 @@ public class playerShipSpawnScript : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 
 	public override void OnStartServer()
 	{
-		var spawnPosition = new Vector3(0.0f,0.0f,0.0f);
-		var spawnRotation = Quaternion.Euler(0.0f,0.0f,0.0f);
+		CmdSpawnShip();
+	}
 
-		var ship = (GameObject) Instantiate(shipPrefab,spawnPosition,spawnRotation);
-		NetworkServer.Spawn(ship);
-		
-		Utility.startingShip = ship;
+	public override void OnStartClient()
+	{
+		if(isClient)
+		{
+		RpcSpawnShip();
+		}
 	}
 	
 	// Update is called once per frame
@@ -27,4 +28,29 @@ public class playerShipSpawnScript : NetworkBehaviour {
 		
 	}
 
+	[Command]
+	void CmdSpawnShip()
+	{
+		Debug.Log("here!");
+		var spawnPosition = new Vector3(0.0f,0.0f,0.0f);
+		var spawnRotation = Quaternion.Euler(0.0f,0.0f,0.0f);
+
+		var ship = (GameObject) Instantiate(shipPrefab,spawnPosition,spawnRotation);
+		
+		Utility.startingShip = ship;
+		NetworkServer.Spawn(ship);
+	}
+
+	[ClientRpc]
+	void RpcSpawnShip()
+	{
+		Debug.Log("here!");
+		var spawnPosition = new Vector3(0.0f,0.0f,0.0f);
+		var spawnRotation = Quaternion.Euler(0.0f,0.0f,0.0f);
+
+		var ship = (GameObject) Instantiate(shipPrefab,spawnPosition,spawnRotation);
+		
+		Utility.startingShip = ship;
+		NetworkServer.Spawn(ship);
+	}
 }
