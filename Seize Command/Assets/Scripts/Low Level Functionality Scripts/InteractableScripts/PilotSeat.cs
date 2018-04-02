@@ -8,6 +8,7 @@ public class PilotSeat : AbstractSeat
     AbstractAimManager shipAimManager;
     ShipInteractor shipInteractor;
 
+
     void Awake()
     {
         shipMovementManager = GetComponentInParent<AbstractMovementManager>();
@@ -17,6 +18,7 @@ public class PilotSeat : AbstractSeat
 
     protected override void TakeASeat(GameObject interactor)
     {
+
         base.TakeASeat(interactor);
 
         shipInteractor.enabled = true;
@@ -25,6 +27,8 @@ public class PilotSeat : AbstractSeat
             shipMovementManager.enabled = true;
             shipAimManager.enabled = true;
         }
+
+        GetComponentInParent<networkShipAimManager>().inSeat = true;
     }
 
     protected override void LeaveSeat(GameObject interactor)
@@ -37,5 +41,7 @@ public class PilotSeat : AbstractSeat
             shipMovementManager.enabled = false;
             shipAimManager.enabled = false;
         }
+
+        GetComponentInParent<networkShipAimManager>().inSeat = false;
     }
 }
