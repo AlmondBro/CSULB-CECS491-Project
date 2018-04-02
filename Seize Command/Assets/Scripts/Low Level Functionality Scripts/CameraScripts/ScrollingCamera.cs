@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
-public class ScrollingCamera : NetworkBehaviour
+
+public class ScrollingCamera : MonoBehaviour
 {
     [Header("Scroll Boundaries")]
     [SerializeField] int lowerBound;
@@ -31,7 +31,6 @@ public class ScrollingCamera : NetworkBehaviour
         fadedIn = false;
 
         GameObject ship = Utility.FindParent(PlayerReference.p);
-
         SpriteRenderer[] sprites = ship.GetComponentsInChildren<SpriteRenderer>();
 
         coFadeIn = CoFadeIn(sprites);

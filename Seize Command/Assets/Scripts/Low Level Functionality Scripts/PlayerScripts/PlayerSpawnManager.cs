@@ -4,23 +4,14 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class PlayerSpawnManager : NetworkBehaviour {
-    
+
 	void Start()
 	{
 		if (!isLocalPlayer) {
 			return;
 		}
-
-		
-        GameObject[] startingShips = GameObject.FindGameObjectsWithTag("startingShip");
-        gameObject.transform.parent = startingShips[0].transform;
-		
-
-		this.setPlayer ();
-
-		
+		this.setPlayer (); 
 	}
-
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,5 +22,4 @@ public class PlayerSpawnManager : NetworkBehaviour {
 	{
 		Camera.main.GetComponent<CameraController> ().lockToPlayer (gameObject);
 	}
-
 }

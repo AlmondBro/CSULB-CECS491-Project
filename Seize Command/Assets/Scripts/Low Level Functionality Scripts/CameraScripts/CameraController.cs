@@ -26,9 +26,6 @@ public class CameraController : MonoBehaviour
 	{
 		player = p;
 		offset = new Vector3 (0, 0, -10);
-		
-		var scrollScript = gameObject.GetComponent<ScrollingCamera>();
-		scrollScript.enabled = true;
 	}
 		
 }

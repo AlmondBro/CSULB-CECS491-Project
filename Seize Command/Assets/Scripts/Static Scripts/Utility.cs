@@ -4,8 +4,6 @@ using UnityEngine;
 
 public static class Utility
 {
-    public static GameObject startingShip;
-
     public static GameObject FindParent(GameObject child)
     {
         GameObject parent;
