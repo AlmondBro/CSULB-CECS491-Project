@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeInteractReapplyCollisionWithSeat : AbstractSeatSubscribers
+public class OnDeInteractReapplyCollisionWithSeat : AbstractSubscribers<AbstractSeat>
 {
     void OnEnable()
     {
-        seat.onDeInteract += ReapplyCollisionWithSeat;
+        type.onDeInteract += ReapplyCollisionWithSeat;
     }
 
     void OnDisable()
     {
-        if (seat)
+        if (type)
         {
-            seat.onDeInteract -= ReapplyCollisionWithSeat;
+            type.onDeInteract -= ReapplyCollisionWithSeat;
         }
     }
 
     void ReapplyCollisionWithSeat(GameObject interactor)
     {
-        Collider2D seatColl = GetComponentInParent<Collider2D>();
-        Collider2D[] interactorColl = interactor.GetComponentsInParent<Collider2D>();
+        Collider2D seatColl = GetComponent<Collider2D>();
+        Collider2D[] interactorColl = interactor.GetComponents<Collider2D>();
 
         for(int i = 0; i < interactorColl.Length; i++)
         {

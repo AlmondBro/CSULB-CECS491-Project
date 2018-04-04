@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class ShipInteractor : AbstractInteractionManager
 {
-    public bool Interacting
-    {
-        get
-        {
-            return interacting;
-        }
-        set
-        {
-            interacting = value;
-        }
-    }
-
+    /*
     public Transform BoardLocation
     {
         get
@@ -29,12 +18,13 @@ public class ShipInteractor : AbstractInteractionManager
     }
 
     [SerializeField] Transform boardLocation;
-    bool interacting;
+    */
+
+    public GameObject IsBoarding { get; set; }
 
     void Awake()
 	{
 		enabled = false;
-        Interacting = false;
 	}
 	
 	void FixedUpdate ()
@@ -43,8 +33,8 @@ public class ShipInteractor : AbstractInteractionManager
         {
             if (interactable != null)
             {
-                Debug.Log("hi");
-                interactable.Interact(gameObject);
+                GameObject ship = transform.root.gameObject;
+                interactable.Interact(ship);
             }
         }
 	}

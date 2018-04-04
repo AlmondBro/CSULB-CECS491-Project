@@ -11,7 +11,7 @@ public abstract class AbstractWeapon: MonoBehaviour, IFireable
 
     bool readyToFire;
 
-    void Start()
+    protected virtual void Start()
     {
         readyToFire = true;
     }
@@ -34,21 +34,5 @@ public abstract class AbstractWeapon: MonoBehaviour, IFireable
         readyToFire = false;
         yield return new WaitForSeconds(cooldown);
         readyToFire = true;
-    }
-
-    protected GameObject FindParentWithTag(string tag)
-    {
-        Transform t = transform;
-        while(t.parent)
-        {
-            if(t.parent.CompareTag(tag))
-            {
-                return t.parent.gameObject;
-            }
-
-            t = t.parent.transform;
-        }
-
-        return null;
     }
 }

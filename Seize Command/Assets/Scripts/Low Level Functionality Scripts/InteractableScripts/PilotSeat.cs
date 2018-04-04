@@ -6,28 +6,38 @@ public class PilotSeat : AbstractSeat
 {
     AbstractMovementManager shipMovementManager;
     AbstractAimManager shipAimManager;
+    ShipInteractor shipInteractor;
+    ShipInteractable shipInteractable;
 
     void Awake()
     {
         shipMovementManager = GetComponentInParent<AbstractMovementManager>();
         shipAimManager = GetComponentInParent<AbstractAimManager>();
+        shipInteractor = transform.root.GetComponentInChildren<ShipInteractor>();
+        shipInteractable = transform.root.GetComponentInChildren<ShipInteractable>();
     }
 
     protected override void TakeASeat(GameObject interactor)
     {
         base.TakeASeat(interactor);
-        Debug.Log("Pilot Seat On");
-		shipInteractor.enabled = true;
-        shipMovementManager.enabled = true;
-        shipAimManager.enabled = true;
+
+        shipInteractor.enabled = true;
+        if(!shipInteractor.IsBoarding && !shipInteractable.CurrentInteractor)
+        {
+            shipMovementManager.enabled = true;
+            shipAimManager.enabled = true;
+        }
     }
 
     protected override void LeaveSeat(GameObject interactor)
     {
         base.LeaveSeat(interactor);
-        Debug.Log("Pilot Seat Off");
+
 		shipInteractor.enabled = false;
-        shipMovementManager.enabled = false;
-        shipAimManager.enabled = false;
+        if(!shipInteractor.IsBoarding)
+        {
+            shipMovementManager.enabled = false;
+            shipAimManager.enabled = false;
+        }
     }
 }

@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractTurnOffAttack : AbstractSeatSubscribers
+public class OnInteractTurnOffAttack : AbstractSubscribers<AbstractSeat>
 {
     void OnEnable()
     {
-        seat.onInteract += TurnOffPlayerAttack;
+        type.onInteract += TurnOffPlayerAttack;
     }
 
     void OnDisable()
     {
-        if (seat)
+        if (type)
         {
-            seat.onInteract += TurnOffPlayerAttack;
+            type.onInteract += TurnOffPlayerAttack;
         }
     }
 

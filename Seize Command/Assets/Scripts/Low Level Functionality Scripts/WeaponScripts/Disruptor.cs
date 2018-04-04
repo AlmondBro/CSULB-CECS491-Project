@@ -15,7 +15,7 @@ public class Disruptor : AbstractWeapon
     {
         Collider2D projectileCollider = projectileObject.GetComponent<Collider2D>();
 
-        GameObject ship = FindParentWithTag("Ship");
+        GameObject ship = transform.root.gameObject;
         Collider2D[] shipColliders = ship.GetComponentsInChildren<Collider2D>();
 
         for (int i = 0; i < shipColliders.Length; i++)
