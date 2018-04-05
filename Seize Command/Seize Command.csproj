@@ -317,6 +317,7 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_MoveTowards_Movement.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Patrol_Movement.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_Attack.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_Dodge.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_FieldOfVision.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\AI_Ship_Scripts\AI_Ship_Movement.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\CameraScripts\CameraController.cs" />
@@ -327,6 +328,12 @@
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractorScripts\PlayerInteractor.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\InteractorScripts\ShipInteractor.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\MiscellaneousScripts\Door.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PathFinding\Grid.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PathFinding\Heap.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PathFinding\Node.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PathFinding\PathAlgorithm.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PathFinding\PathRequestManager.cs" />
+    <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PathFinding\Unit.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAimManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerAttackManager.cs" />
     <Compile Include="Assets\Scripts\Low Level Functionality Scripts\PlayerScripts\PlayerMovementManager.cs" />
