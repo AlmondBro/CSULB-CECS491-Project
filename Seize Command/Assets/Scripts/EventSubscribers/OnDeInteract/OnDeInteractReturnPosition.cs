@@ -2,26 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeInteractReturnPosition : AbstractSubscribers<AbstractSeat>
+public class OnDeInteractReturnPosition : AbstractSeatSubscribers
 {
     [SerializeField] Transform returnPosition;
 
     void OnEnable()
     {
-        type.onDeInteract += ReturnPosition;
+        seat.onDeInteract += ReturnPosition;
     }
 
     void OnDisable()
     {
-        if (type)
+        if (seat)
         {
-            type.onDeInteract -= ReturnPosition;
+            seat.onDeInteract -= ReturnPosition;
         }
     }
 
     void ReturnPosition(GameObject interactor)
     {
-        interactor.transform.position = returnPosition.position;
-        interactor.transform.rotation = returnPosition.rotation; 
+        Transform parent = interactor.transform.parent;
+
+        parent.position = returnPosition.position;
+        parent.rotation = returnPosition.rotation; 
     }
 }

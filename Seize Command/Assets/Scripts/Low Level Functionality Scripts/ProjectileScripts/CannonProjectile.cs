@@ -17,10 +17,9 @@ public class CannonProjectile : AbstractProjectile
         rb.velocity = transform.up * projectileSpeed;
     }
 
-    protected override void SendDamage(GameObject damagedObject)
+    protected override void SendDamage(GameObject ship)
     {
-        IDamageable damageable = damagedObject.GetComponent<IDamageable>();
-        damageable.TakeDamage(damage);
+        ship.GetComponent<HealthManager>().TakeDamage(damage);
         Destroy(gameObject);
     }
 }

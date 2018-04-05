@@ -16,10 +16,6 @@ public class CharacterWeapon : AbstractWeapon
         Collider2D projectileCollider = projectileObject.GetComponent<Collider2D>();
         Collider2D characterCollider = parent.GetComponent<Collider2D>();
 
-        GameObject shield = transform.root.GetComponentInChildren<ShieldHealthManager>().gameObject;
-        CapsuleCollider2D shieldCollider = shield.GetComponent<CapsuleCollider2D>();
-
         Physics2D.IgnoreCollision(characterCollider, projectileCollider);
-        Physics2D.IgnoreCollision(shieldCollider, projectileCollider);
     }
 }

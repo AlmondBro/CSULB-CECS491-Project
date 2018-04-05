@@ -23,10 +23,9 @@ public class BeamLazer : AbstractProjectile
         }   
     }
 
-    protected override void SendDamage(GameObject damagedObject)
+    protected override void SendDamage(GameObject ship)
     {
-        IDamageable damageable = damagedObject.GetComponent<IDamageable>();
-        damageable.TakeDamage(damage);
+        ship.GetComponent<HealthManager>().TakeDamage(damage);
         Destroy(gameObject);
     }
 

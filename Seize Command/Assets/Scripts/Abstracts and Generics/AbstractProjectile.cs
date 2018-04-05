@@ -19,14 +19,14 @@ public abstract class AbstractProjectile : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.collider.transform.parent.GetComponent(typeof(IDamageable)))
+        if (coll.gameObject.GetComponent<HealthManager>())
         {
-            GameObject damagedObject = coll.collider.transform.parent.gameObject;
-            SendDamage(damagedObject);
+            GameObject objectWithHealth = coll.gameObject;
+            SendDamage(objectWithHealth);
         }
     }
 
-    protected abstract void SendDamage(GameObject damagedObject);
+    protected abstract void SendDamage(GameObject ship);
 
     IEnumerator CoDestroyOverTime()
     {

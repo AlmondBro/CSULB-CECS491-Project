@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeInteractRemoveCurrentInteractor : AbstractSubscribers<AbstractSeat>
+public class OnDeInteractRemoveCurrentInteractor : AbstractSeatSubscribers
 {
     void OnEnable()
     {
-        type.onDeInteract += SetInteractingToFalse;
+        seat.onDeInteract += SetInteractingToFalse;
     }
 
     void OnDisable()
     {
-        if (type)
+        if (seat)
         {
-            type.onDeInteract -= SetInteractingToFalse;
+            seat.onDeInteract -= SetInteractingToFalse;
         }
     }
 
     void SetInteractingToFalse(GameObject interactor)
     {
-        type.CurrentInteractor = null;
+        seat.CurrentInteractor = null;
     }
 }

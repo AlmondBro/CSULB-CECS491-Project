@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnActivateChangeWeapon : AbstractSubscribers<ShipWeaponControlManager>
+public class OnActivateChangeWeapon : AbstractShipSubscribers
 {
     void OnEnable()
     {
-        type.onActivate += ChangeWeapon;
+        control.onActivate += ChangeWeapon;
     }
 
     void OnDisable()
     {
-        if(type)
+        if(control)
         {
-            type.onActivate -= ChangeWeapon;
+            control.onActivate -= ChangeWeapon;
         }
     }
 
     void ChangeWeapon(AbstractWeapon weapon)
     {
+        Debug.Log("hi");
         AbstractAttackManager shipAttackManager = GetComponentInParent<AbstractAttackManager>();
         shipAttackManager.Weapon = weapon;
     }

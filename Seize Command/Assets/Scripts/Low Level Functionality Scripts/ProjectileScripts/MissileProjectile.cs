@@ -30,10 +30,9 @@ public class MissileProjectile : AbstractProjectile
         target = Physics2D.OverlapCircle(mouseLocation, 1).gameObject;
     }
 
-    protected override void SendDamage(GameObject damagedObject)
+    protected override void SendDamage(GameObject ship)
     {
-        IDamageable damageable = damagedObject.GetComponent<IDamageable>();
-        damageable.TakeDamage(damage);
+        ship.GetComponent<HealthManager>().TakeDamage(damage);
         Destroy(gameObject);
     }
 }

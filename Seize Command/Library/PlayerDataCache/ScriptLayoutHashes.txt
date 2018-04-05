@@ -1,10 +1,6 @@
 WindowsStandalone
 SceneListBegin?
-<<<<<<< HEAD
 Assets/Scenes/AI.unity
-=======
-Assets/Scenes/JamesDavis_Projectiles.unity
->>>>>>> JamesDavis_Boarding
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerAimManager
 dc618e556c9f61e6f5daa3be6c456416 Assembly-CSharp.dll:.OnInteractChangeSpriteToSeated
@@ -18,17 +14,10 @@ c28edace1fdf0563f7e72075531c5744 UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
 ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlPlayableAsset
-<<<<<<< HEAD
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-=======
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlTrack
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
-9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
->>>>>>> JamesDavis_Boarding
 2d008e42164e3a5a022087fb7c674b35 Assembly-CSharp.dll:.CharacterWeapon
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnDeInteractRemoveCurrentInteractor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnDeInteractReapplyCollisionWithSeat
@@ -110,17 +99,10 @@ c28edace1fdf0563f7e72075531c5744 UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
 ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlPlayableAsset
-<<<<<<< HEAD
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-=======
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.ControlTrack
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
-6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
-9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
->>>>>>> JamesDavis_Boarding
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnInteractTurnOffMovement
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -149,7 +131,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnInteractSetCurrentInteractor
 516e5074221137481765215737b09ff5 Assembly-CSharp.dll:.DisruptorProjectile
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CameraController
+2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.CameraController
 2d008e42164e3a5a022087fb7c674b35 Assembly-CSharp.dll:.Missile
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AI_Ship_Attack
 6b753804cbb4944ebb3bf663516834fa Assembly-CSharp.dll:.ShotGun
@@ -158,11 +140,7 @@ c4d754484b2675880791dfc8626a1afe Assembly-CSharp.dll:.BeamLazer
 2d008e42164e3a5a022087fb7c674b35 Assembly-CSharp.dll:.Beam
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
-<<<<<<< HEAD
 a7e73bb490d9cf10727be56c7365c5c3 Assembly-CSharp.dll:.ScrollingCamera
-=======
-ba9c503b1f923c56331841388c78ad4a Assembly-CSharp.dll:.ScrollingCamera
->>>>>>> JamesDavis_Boarding
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnActivateTurnOnWeaponAim
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnDeactivateTurnOffWeaponAim
 829175d316c732639b55f7832bf9263d Assembly-CSharp.dll:.HealthManager
@@ -211,12 +189,8 @@ be0c9bbe5ab85a94d63aea99216a7691 Assembly-CSharp.dll:.TorpedoProjectile
 6cdd10c485ead18e9c40c4a8f9fd0c73 Assembly-CSharp.dll:.CannonProjectile
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnInteractTurnOffAttack
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShipInteractable
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerReference
 80d5fb569f9b6dc4efa87ddbaad56eb6 Assembly-CSharp.dll:.OnDeactivateChangeWeaponPositionToOrigin
 609b5e8581a0a76a87640508874538ab Assembly-CSharp.dll:.ShipInteractor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShipWeaponControlManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OnDeInteractTurnOnAttack
-<<<<<<< HEAD
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AI_Ship_FieldOfVision
-=======
->>>>>>> JamesDavis_Boarding

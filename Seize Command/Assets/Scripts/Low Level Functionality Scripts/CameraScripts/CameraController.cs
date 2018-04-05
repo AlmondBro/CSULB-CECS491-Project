@@ -2,20 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
-{
+public class CameraController : MonoBehaviour {
+
+    public GameObject Player
+    {
+        get
+        {
+            return player;
+        }
+    }
+
+    [SerializeField] GameObject player;
+
     Vector3 offset;
 
 	void Start ()
     {
-        offset = transform.position - PlayerReference.p.transform.position;
+        offset = transform.position - player.transform.position;
 	}
 	
 	void LateUpdate ()
     {
-        if(PlayerReference.p)
+        if(player)
         {
-            transform.position = PlayerReference.p.transform.position + offset;
+            transform.position = player.transform.position + offset;
         }
 	}
 }
