@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerspectiveCamera.CSharp", "PerspectiveCamera.CSharp.csproj", "{6CCAC0BB-E724-D698-13F5-8DE713A4DBCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CCAC0BB-E724-D698-13F5-8DE713A4DBCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCAC0BB-E724-D698-13F5-8DE713A4DBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCAC0BB-E724-D698-13F5-8DE713A4DBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCAC0BB-E724-D698-13F5-8DE713A4DBCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

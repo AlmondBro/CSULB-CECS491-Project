@@ -1,31 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class CameraController : MonoBehaviour
-{
+public class CameraController : MonoBehaviour {
+
+    public GameObject Player
+    {
+        get
+        {
+            return player;
+        }
+    }
+
+    [SerializeField] GameObject player;
+
     Vector3 offset;
-
-	public GameObject player;
 
 	void Start ()
     {
-
+        offset = transform.position - player.transform.position;
 	}
 	
 	void LateUpdate ()
     {
-		if(player)
+        if(player)
         {
-			transform.position = player.transform.position + offset;
+            transform.position = player.transform.position + offset;
         }
 	}
-
-	public void lockToPlayer(GameObject p)
-	{
-		player = p;
-		offset = new Vector3 (0, 0, -10);
-	}
-		
 }

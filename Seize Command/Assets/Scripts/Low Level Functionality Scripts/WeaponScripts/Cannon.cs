@@ -14,7 +14,8 @@ public class Cannon : AbstractWeapon
     protected override void IgnoreCollisions(GameObject projectileObject)
     {
         Collider2D projectileCollider = projectileObject.GetComponent<Collider2D>();
-        GameObject ship = transform.root.gameObject;
+
+        GameObject ship = FindParentWithTag("Ship");
         Collider2D[] shipColliders = ship.GetComponentsInChildren<Collider2D>();
 
         for (int i = 0; i < shipColliders.Length; i++)

@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08601501fefd4f547b2d2ae516686b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proj: {fileID: 114541421104148672, guid: 1c78ebddfafccd3408d3ffc93f49f6b8, type: 2}
+  proj: {fileID: 114940630310700404, guid: 91056084874e1f048a5712b606b72562, type: 2}
   projSpawnPoint: {fileID: 4625302009108390}
   parent: {fileID: 0}
   cooldown: 0.5

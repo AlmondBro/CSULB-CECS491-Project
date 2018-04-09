@@ -2,24 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractChangePosition : AbstractSubscribers<AbstractSeat>
+public class OnInteractChangePosition : AbstractSeatSubscribers
 {
     void OnEnable()
     {
-        type.onInteract += ChangePlayerPosition;
+        seat.onInteract += ChangePlayerPosition;
     }
 
     void OnDisable()
     {
-        if (type)
+        if (seat)
         {
-            type.onInteract -= ChangePlayerPosition;
+            seat.onInteract -= ChangePlayerPosition;
         }
     }
 
     void ChangePlayerPosition(GameObject interactor)
     {
-        interactor.transform.position = transform.position;
-        interactor.transform.rotation = transform.rotation;
+        Transform parent = interactor.transform.parent;
+
+        parent.position = transform.position;
+        parent.rotation = transform.rotation;
     }
 }

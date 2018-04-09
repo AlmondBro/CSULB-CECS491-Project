@@ -3,20 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDeactivateChangeWeaponPositionToOrigin : AbstractSubscribers<ShipWeaponControlManager>
+public class OnDeactivateChangeWeaponPositionToOrigin : AbstractShipSubscribers
 {
     [SerializeField] Transform ship;
 
     void OnEnable()
     {
-        type.onDeactivate += ChangeWeaponPositionToOrigin;
+        control.onDeactivate += ChangeWeaponPositionToOrigin;
     }
 
     void OnDisable()
     {
-        if (type)
+        if (control)
         {
-            type.onDeactivate -= ChangeWeaponPositionToOrigin;
+            control.onDeactivate -= ChangeWeaponPositionToOrigin;
         }
     }
 

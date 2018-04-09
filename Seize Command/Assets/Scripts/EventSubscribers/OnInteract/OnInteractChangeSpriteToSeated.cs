@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInteractChangeSpriteToSeated : AbstractSubscribers<AbstractSeat>
+public class OnInteractChangeSpriteToSeated : AbstractSeatSubscribers
 {
     [SerializeField] Sprite seatedSprite;
 
     void OnEnable()
     {
-        type.onInteract += ChangePlayerSpriteToSeated;
+        seat.onInteract += ChangePlayerSpriteToSeated;
     }
 
     void OnDisable()
     {
-        if(type)
+        if(seat)
         {
-            type.onInteract -= ChangePlayerSpriteToSeated;
+            seat.onInteract -= ChangePlayerSpriteToSeated;
         }
     }
 

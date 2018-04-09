@@ -5,9 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interactable
+  - Projectile
   - Ship
   - Character
-  - Projectile
+  - AI
   layers:
   - Default
   - TransparentFX

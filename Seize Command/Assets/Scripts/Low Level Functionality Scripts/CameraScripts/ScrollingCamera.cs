@@ -4,143 +4,82 @@ using UnityEngine;
 
 public class ScrollingCamera : MonoBehaviour
 {
-    [Header("Scroll Boundaries")]
-    [SerializeField] int lowerBound;
-    [SerializeField] int upperBound;
+    [Header("Top Level/Deck Level changes")]
+    [SerializeField] float changeLayerViewLowPoint;
+    [SerializeField] float changeLayerViewHighPoint;
+    [SerializeField] float changeOpacityStrength;
 
     [Space]
 
-    [Header("Ship Fade Values")]
-    [SerializeField] float fadeSpeed;
-    [SerializeField] int fadeInValue;
-    [SerializeField] int fadeOutValue;
+    [Header("Zooming Boundaries")]
+    [SerializeField] int startingSize;
+    [SerializeField] int lowerBound;
+    [SerializeField] int upperBound;
 
-    float orthoSize;
+    float newSize;
 
-    Camera mainCamera;
-
-    IEnumerator coFadeIn;
-    IEnumerator coFadeOut;
-
-    bool fadedIn;
+    Camera main;
 
     void Start()
     {
-        mainCamera = GetComponent<Camera>();
-        orthoSize = 30;
-        fadedIn = false;
-
-        GameObject ship = Utility.FindParent(PlayerReference.p);
-        SpriteRenderer[] sprites = ship.GetComponentsInChildren<SpriteRenderer>();
-
-        coFadeIn = CoFadeIn(sprites);
-        coFadeOut = CoFadeOut(sprites);
+        main = GetComponent<Camera>();
+        main.orthographicSize = startingSize;
     }
 
     void FixedUpdate()
     {
         Scroll();
-        CheckToFade();
     }
 
     void Scroll()
     {
         float delta = Input.GetAxis("Mouse ScrollWheel");
 
+        newSize = main.orthographicSize;
+
         if (delta > 0f)
         {
-            orthoSize--;
+            newSize--;
+            Check(delta);
         }
         if (delta < 0f)
         {
-            orthoSize++;
+            newSize++;
+            Check(delta);
         }
 
-        orthoSize = Mathf.Clamp(orthoSize, lowerBound, upperBound);
-        mainCamera.orthographicSize = orthoSize;
-    }
-
-    void CheckToFade()
-    {
-        if(mainCamera.orthographicSize <= fadeInValue && !fadedIn)
+        if (newSize < upperBound && newSize > lowerBound)
         {
-            FadeIn();
-        }
-        else if(mainCamera.orthographicSize >= fadeOutValue && fadedIn)
-        {
-            FadeOut();
+            main.orthographicSize = newSize;
         }
     }
 
-    void FadeIn()
+    void ChangeAlpha(float delta)
     {
-        if (PlayerReference.p)
+        GameObject player = GetComponent<CameraController>().Player;
+        GameObject ship = player.transform.parent.parent.gameObject;
+
+        if (ship.CompareTag("Ship"))
         {
-            fadedIn = true;
-
-            GameObject ship = Utility.FindParent(PlayerReference.p);
-            SpriteRenderer[] sprites = ship.GetComponentsInChildren<SpriteRenderer>();
-
-            StopCoroutine(coFadeOut);
-            coFadeIn = CoFadeIn(sprites);
-            StartCoroutine(coFadeIn);
-        }
-    }
-
-    IEnumerator CoFadeIn(SpriteRenderer[] sprites)
-    {
-        float t = 0f;
-        while (sprites[0].color.a != 0f)
-        {
-            for (int i = 0; i < sprites.Length; i++)
+            SpriteRenderer[] topLevelSprites = ship.GetComponentsInChildren<SpriteRenderer>();
+            for (int i = 0; i < topLevelSprites.Length; i++)
             {
-                if (sprites[i].sortingLayerName == "Ship Top Level")
+                if (topLevelSprites[i].sortingLayerName == "Ship Top Level")
                 {
-                    Color a = sprites[i].color;
-                    t += Time.deltaTime * fadeSpeed;
-                    float alpha = Mathf.Lerp(a.a, 0f, t);
-                    a.a = alpha;
-                    sprites[i].color = a;
+                    Color newColor = topLevelSprites[i].color;
+                    newColor.a += -delta * changeOpacityStrength;
+
+                    topLevelSprites[i].color = newColor;
                 }
             }
-
-            yield return null;
         }
     }
 
-    void FadeOut()
+    void Check(float delta)
     {
-        if(PlayerReference.p)
+        if (newSize < changeLayerViewHighPoint && newSize > changeLayerViewLowPoint)
         {
-            fadedIn = false;
-
-            GameObject ship = Utility.FindParent(PlayerReference.p);
-            SpriteRenderer[] sprites = ship.GetComponentsInChildren<SpriteRenderer>();
-
-            StopCoroutine(coFadeIn);
-            coFadeOut = CoFadeOut(sprites);
-            StartCoroutine(coFadeOut);
-        }
-    }
-
-    IEnumerator CoFadeOut(SpriteRenderer[] sprites)
-    {
-        float t = 0f;
-        while (sprites[0].color.a != 1f)
-        {
-            for (int i = 0; i < sprites.Length; i++)
-            {
-                if (sprites[i].sortingLayerName == "Ship Top Level")
-                {
-                    Color a = sprites[i].color;
-                    t += Time.deltaTime * fadeSpeed;
-                    float alpha = Mathf.Lerp(a.a, 1f, t);
-                    a.a = alpha;
-                    sprites[i].color = a;
-                }
-            }
-
-            yield return null;
+            ChangeAlpha(delta);
         }
     }
 }
