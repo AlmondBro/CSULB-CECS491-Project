@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114940630310700404}
   m_Layer: 8
   m_Name: CannonProjectile
-  m_TagString: Projectile
+  m_TagString: AI_Ship_Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  lifeTime: 10
-  projectileSpeed: 5
+  lifeTime: 30
+  projectileSpeed: 10
 --- !u!212 &212475417155585712
 SpriteRenderer:
   m_ObjectHideFlags: 1

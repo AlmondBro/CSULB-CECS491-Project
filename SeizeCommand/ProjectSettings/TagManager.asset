@@ -9,6 +9,7 @@ TagManager:
   - Character
   - Projectile
   - AI
+  - AI_Ship_Projectile
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Projectiles
   - Furniture
-  - 
+  - Unwalkable
   - 
   - 
   - 

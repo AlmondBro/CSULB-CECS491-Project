@@ -15,7 +15,7 @@ public class CharacterProjectile : AbstractProjectile {
     protected override void OnCollisionEnter2D(Collision2D coll)
 	    {
 		//checks if the game object is a character, a player, or the AI for it 
-		if(coll.gameObject.CompareTag("Character") || coll.gameObject.CompareTag("Player") || coll.gameObject.CompareTag("AI"))
+		if(coll.gameObject.CompareTag("Character") || coll.gameObject.CompareTag("Player") || coll.gameObject.CompareTag("AI")|| coll.gameObject.CompareTag("Ship"))
         {
             base.OnCollisionEnter2D(coll);
         }
