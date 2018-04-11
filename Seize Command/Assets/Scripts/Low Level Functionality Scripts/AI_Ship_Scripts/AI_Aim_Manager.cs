@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class AI_Aim_Manager : AbstractAimManager
 {
-<<<<<<< HEAD
+
     private float rot_speed = 30;
     Vector3 distance;
     float speed = 30f;
     float rotation_speed = 57f;
     AI_Ship_FieldOfVision fov;
-=======
-    [SerializeField] float rot_speed;
+
 
     AI_Ship_TargetSelection targetSelector;
 
@@ -133,4 +132,4 @@ public class AI_Aim_Manager : AbstractAimManager
 
     */
 }
->>>>>>> 355bda87c535a27f36a2804d5fae805d3b3f76cf
+

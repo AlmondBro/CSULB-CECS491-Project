@@ -42,7 +42,8 @@ public class Grid : MonoBehaviour {
             for(int j = 0; j < gridSizey; j++)
             {
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (i * nodeDiameter + nodeRadius) + Vector3.up * (j * nodeDiameter + nodeRadius);
-                bool walkable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkableMask));
+                bool walkable = !(Physics2D.OverlapCircle(worldPoint, nodeRadius, unwalkableMask));
+                
                 grid[i, j] = new Node(walkable, worldPoint, i, j);
             }
         }  
@@ -98,6 +99,7 @@ public class Grid : MonoBehaviour {
                 foreach (Node n in grid)
                 {
                     Gizmos.color = (n.walkable) ? Color.white : Color.red;
+
                     /*
                     if (AINode == n)
                     {
@@ -108,7 +110,7 @@ public class Grid : MonoBehaviour {
                         Gizmos.color = Color.yellow;
                     }
                     */
-                    Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                    Gizmos.DrawCube(n.worldPosition, new Vector3(1,1,0) * (nodeDiameter - .1f));
                 }
             }
         }

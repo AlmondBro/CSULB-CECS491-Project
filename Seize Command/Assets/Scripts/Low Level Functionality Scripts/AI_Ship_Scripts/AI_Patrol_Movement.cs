@@ -10,12 +10,9 @@ public class AI_Patrol_Movement : MonoBehaviour
     float timeCounter = 0;
     float size;
     float height;
-<<<<<<< HEAD
     bool patrol;
     bool dodging;
-=======
 
->>>>>>> 355bda87c535a27f36a2804d5fae805d3b3f76cf
     float rotation_speed = 57f;
 
     float rot_speed = 20f;
@@ -30,12 +27,9 @@ public class AI_Patrol_Movement : MonoBehaviour
         AI_Ship = gameObject.GetComponentInParent<Rigidbody2D>();
         size = 50;
         height = 50;
-<<<<<<< HEAD
         patrol = true; //start patrolling
         dodging = false; //dodge is turned on when patrol is off
-=======
 
->>>>>>> 355bda87c535a27f36a2804d5fae805d3b3f76cf
         x_position = transform.position.x;
         y_position = transform.position.y;
 
@@ -44,7 +38,7 @@ public class AI_Patrol_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-<<<<<<< HEAD
+
         if (patrol)
         {
             Patrol();
@@ -53,17 +47,14 @@ public class AI_Patrol_Movement : MonoBehaviour
         {
             Dodge();
         }
-=======
+
         Patrol();
->>>>>>> 355bda87c535a27f36a2804d5fae805d3b3f76cf
+
     }
 
     void Patrol()
     {
-<<<<<<< HEAD
 
-=======
->>>>>>> 355bda87c535a27f36a2804d5fae805d3b3f76cf
         timeCounter += Time.deltaTime;
 
         float x = Mathf.Cos(timeCounter) * size;
@@ -73,7 +64,7 @@ public class AI_Patrol_Movement : MonoBehaviour
 
         transform.Rotate(Vector3.forward * rotation_speed * Time.deltaTime);
     }
-<<<<<<< HEAD
+
     void Dodge()
     {
 
@@ -110,6 +101,5 @@ public class AI_Patrol_Movement : MonoBehaviour
         return AI_Ship;
     }
 }
-=======
-}
->>>>>>> 355bda87c535a27f36a2804d5fae805d3b3f76cf
+
+

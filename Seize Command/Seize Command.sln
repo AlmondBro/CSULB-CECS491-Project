@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seize Command", "Seize Command.csproj", "{F6EBFC97-9F53-C9CD-EA6A-DC3BE57D0EE8}"
 EndProject
 Global

@@ -23,7 +23,7 @@ TagManager:
   - Background
   - Ship
   - AI
-  - 
+  - unwalkable
   - 
   - 
   - 
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: Projectiles
     uniqueID: 4229240797
+    locked: 0
+  - name: unwalkable
+    uniqueID: 2600127747
     locked: 0
