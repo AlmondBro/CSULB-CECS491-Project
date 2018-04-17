@@ -71,6 +71,7 @@ Unity-Files/Camera Demo/Library/*
 Unity-Files/Projectile Demo/ProjectSettings/metadata/*
 "Unity-Files/Projectile Demo/ProjectSettings/metadata/*"
 Unity-Files/Projectile Demo/Library/metadata/*
+"Unity-Files/Projectile Demo/Library/metadata/*"
 Unity-Files/Library/metadata/*
 "Unity-Files/Projectile Demo/ProjectSettings/*"
 Unity-Files/Projectile Demo/ProjectSettings/*
@@ -95,7 +96,7 @@ Seize Command/Assets/Prefabs/*
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 Unity-Files/Projectile Demo/Library*
-Unity-Files/Projectile Demo/Library
+"Unity-Files/Projectile Demo/Library"
 
 # Visual Studio 2015 cache directory
 /.vs/
