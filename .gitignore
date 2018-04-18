@@ -85,6 +85,20 @@ Seize Command/ProjectSettings/*
 "Seize Command/ProjectSettings/*
 "Seize Command/Assets/Prefabs/*"
 Seize Command/Assets/Prefabs/*
+"Seize Command/Library/metadata/*"
+Seize Command/Library/metadata/*
+"Seize Command/Library/*"
+Seize Command/Library/*
+
+"Seize Command/.vs/"
+"Seize Command/Library/UnityAssemblies/*"
+"Seize Command/ProjectSettings/*"
+"Seize Command/UnityPackageManager/*"
+"Seize Command/Library/"
+"Seize Command/Library/UnityAssemblies/"
+"Seize Command/Library/metadata/"
+
+
 
 # Created by https://www.gitignore.io/api/unity,visualstudio,visualstudiocode
 
