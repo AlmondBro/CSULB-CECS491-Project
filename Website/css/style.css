@@ -340,6 +340,19 @@ footer {
     color: white;
 }
 
+#login-modal {
+	display: block;
+	max-width: 500px;
+	position: absolute;
+	left: 70%;
+	background-color: #16384b;
+}
+
+input#account-toggle:checked ~ section#login-modal {
+	display: none;
+	animation: fadeIn 0.2s ease-in-out;
+}
+
 /* Media queries */ 
 @media only screen and (min-width: 1357px) and (max-width: 1387px) {
     #nav ul li {
