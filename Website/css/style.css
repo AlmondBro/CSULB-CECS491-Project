@@ -70,11 +70,14 @@ nav ul li#navLogo-li:hover {
 
 #nav ul {
     position: relative;
-    text-align: center;
     width: 100%;
     display: table;
     padding: 0;
     margin: 0;
+}
+
+nav ul {
+    text-align: center;
 }
 
 #nav ul li,
@@ -344,13 +347,66 @@ footer {
 	display: block;
 	max-width: 500px;
 	position: absolute;
-	left: 70%;
+	left: 74.5%;
 	background-color: #16384b;
+	top: 110%;
+	z-index: 7;
 }
 
-input#account-toggle:checked ~ section#login-modal {
-	display: none;
+#login-modal::after {
+    content: "";
+    position: absolute; 
+    bottom: 100%;
+    left: 93.5%;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid #16384b;
+}
+
+input#account-toggle:checked + section#login-modal {
+	display: block;
 	animation: fadeIn 0.2s ease-in-out;
+}
+
+section#login-modal {
+    display: none;
+}
+
+#login-modal form {
+    padding: 0.5em;
+    border-bottom: 4px solid #9b7319;
+}
+
+#login-modal form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+#login-modal form fieldset legend {
+    width: 100%;
+    text-align: left;   
+}
+
+#login-modal form fieldset p input {
+    display: block;
+    color: white;
+    background: none;
+    border: 0;
+    border-bottom: 3px solid #9b7319;
+    margin-bottom: 0.5em;   
+    padding: 0.7em 0.7em 0.1em 0.7em; 
+}
+
+nav ul #login-modal form fieldset p label {
+    text-align: left;
+    padding: 0;
+}
+
+#login-modal form fieldset p.forgot-password {
+    margin-top: 1.2em;
+    color: white;
 }
 
 /* Media queries */ 
