@@ -103,8 +103,7 @@ nav ul {
 
 .active-tab,
 #nav ul li:hover,
-#nav ul li:active,
-#nav ul li a:active {
+#nav ul li:active {
     background-color: #16394c;
     text-decoration: none;
 
@@ -353,6 +352,207 @@ footer {
 	z-index: 7;
 }
 
+@media only screen and (min-width: 1401px) and (max-width: 1480px) {
+    #login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 75.5%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 1290px) and (max-width: 1400px) {
+    #login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 77.4%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 1182px) and (max-width: 1289px) {
+    #login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 75%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 1022px) and (max-width: 1181px) {
+    #login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 72.9%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1021px) {
+    #login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 71.9%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 930px) and (max-width: 967px) {
+    #login-modal::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 93%;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 16px solid #16384b;
+    }
+
+    #login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 72.8%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (min-width: 927px) and (max-width: 929px) {
+    section#login-modal::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 91.5%;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 16px solid #16384b;
+    }
+
+    #login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 72.8%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 928px) and (max-width: 929px) {
+    section#login-modal::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 91.5%;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 16px solid #16384b;
+    }
+
+    #login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 72.8%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 927px) {
+    section#login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 58.5%;
+        background-color: #16384b;
+        top: 110%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 636px) and (max-width: 766px) {
+    section#login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 28.8%;
+        background-color: #16384b;
+        top: 124%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 524px) and (max-width: 636px) {
+    section#login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 24.5%;
+        background-color: #16384b;
+        top: 124%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 430px) and (max-width: 524px) {
+    section#login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 19%;
+        background-color: #16384b;
+        top: 124%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 430px) {
+    section#login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 12.5%;
+        background-color: #16384b;
+        top: 124%;
+        z-index: 7;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 350px) {
+    section#login-modal {
+        display: block;
+        max-width: 500px;
+        position: absolute;
+        left: 1%;
+        background-color: #16384b;
+        top: 124%;
+        z-index: 7;
+    }
+}
+
 #login-modal::after {
     content: "";
     position: absolute; 
@@ -408,6 +608,24 @@ nav ul #login-modal form fieldset p label {
     margin-top: 1.2em;
     color: white;
 }
+
+table.highScoresTable {
+	max-width: 1000px;
+	margin: 1em auto;
+    font-size: 1.5em;
+    background: black;
+}
+
+table.highScoresTable th {
+    border-bottom: 3px solid #9b7319;
+}
+
+table.highScoresTable td, table.highScoresTable th {
+	padding: 0.5em;
+	border-bottom: 3px solid #9b7319;
+	border-right: 2px solid #9b7319;
+}
+
 
 /* Media queries */ 
 @media only screen and (min-width: 1357px) and (max-width: 1387px) {
